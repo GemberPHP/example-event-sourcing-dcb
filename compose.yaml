@@ -1,0 +1,9 @@
+services:
+  mysql:
+    image: mysql:8.0.35
+    env_file:
+      - .env
+    volumes:
+      - ./var/tmp/mysql:/var/lib/mysql
+    ports:
+      - "3310:3306"
