@@ -34,6 +34,13 @@
         "symfony/runtime": "7.1.*",
         "symfony/yaml": "7.1.*"
     },
+    "require-dev": {
+        "captainhook/captainhook": "^5.23",
+        "friendsofphp/php-cs-fixer": "^3.58",
+        "phpstan/phpstan": "^1.11",
+        "rector/rector": "^1.2",
+        "shipmonk/composer-dependency-analyser": "^1.5"
+    },
     "replace": {
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
@@ -52,11 +59,6 @@
     "autoload": {
         "psr-4": {
             "Gember\\ExampleEventSourcingDcb\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Gember\\ExampleEventSourcingDcb\\Test\\": "tests/"
         }
     },
     "config": {
@@ -83,6 +85,18 @@
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        }
+        },
+        "cs": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php",
+        "cs:dry-run": "vendor/bin/php-cs-fixer fix --diff --dry-run --config=.php-cs-fixer.php",
+        "dependency-analyser": "vendor/bin/composer-dependency-analyser",
+        "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon",
+        "rector": "vendor/bin/rector process --ansi",
+        "rector:dry-run": "vendor/bin/rector process --ansi --dry-run",
+        "test": [
+            "@rector:dry-run",
+            "@cs:dry-run",
+            "@phpstan",
+            "@dependency-analyser"
+        ]
     }
 }
