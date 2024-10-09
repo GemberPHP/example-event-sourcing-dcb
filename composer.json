@@ -1,8 +1,23 @@
 {
+    "name": "gember/example-event-sourcing-dcb",
+    "description": "Example project (Proof of Concept) with Event Sourcing in PHP using the Dynamic Consistency Boundary pattern (DCB)",
+    "license": "MIT",
     "type": "project",
-    "license": "proprietary",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "keywords": [
+        "event-sourcing",
+        "example",
+        "dcb",
+        "dynamic-consistency-boundary",
+        "domain-driven-design",
+        "ddd"
+    ],
+    "authors": [
+        {
+            "name": "Jeroen de Graaf",
+            "email": "gember@jero.work",
+            "homepage": "https://jero.work"
+        }
+    ],
     "require": {
         "php": ">=8.2",
         "ext-ctype": "*",
@@ -19,24 +34,6 @@
         "symfony/runtime": "7.1.*",
         "symfony/yaml": "7.1.*"
     },
-    "config": {
-        "allow-plugins": {
-            "php-http/discovery": true,
-            "symfony/flex": true,
-            "symfony/runtime": true
-        },
-        "sort-packages": true
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "App\\Tests\\": "tests/"
-        }
-    },
     "replace": {
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
@@ -47,25 +44,45 @@
         "symfony/polyfill-php81": "*",
         "symfony/polyfill-php82": "*"
     },
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        },
-        "post-install-cmd": [
-            "@auto-scripts"
-        ],
-        "post-update-cmd": [
-            "@auto-scripts"
-        ]
-    },
     "conflict": {
         "symfony/symfony": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "symfony/flex": true,
+            "symfony/runtime": true
+        },
+        "sort-packages": true
     },
     "extra": {
         "symfony": {
             "allow-contrib": false,
             "require": "7.1.*"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ],
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         }
     }
 }
