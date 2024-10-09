@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e081fa127d424938b2b42ad624b760b",
+    "content-hash": "95ce839e9c7dcdd5c83f871a61264380",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -187,47 +187,42 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "3.9.1",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "d7dc08f98cba352b2bab5d32c5e58f7e745c11a7"
+                "reference": "7a8252418689feb860ea8dfeab66d64a56a64df8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/d7dc08f98cba352b2bab5d32c5e58f7e745c11a7",
-                "reference": "d7dc08f98cba352b2bab5d32c5e58f7e745c11a7",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/7a8252418689feb860ea8dfeab66d64a56a64df8",
+                "reference": "7a8252418689feb860ea8dfeab66d64a56a64df8",
                 "shasum": ""
             },
             "require": {
-                "composer-runtime-api": "^2",
-                "doctrine/cache": "^1.11|^2.0",
                 "doctrine/deprecations": "^0.5.3|^1",
-                "doctrine/event-manager": "^1|^2",
-                "php": "^7.4 || ^8.0",
+                "php": "^8.1",
                 "psr/cache": "^1|^2|^3",
                 "psr/log": "^1|^2|^3"
             },
             "require-dev": {
                 "doctrine/coding-standard": "12.0.0",
                 "fig/log-test": "^1",
-                "jetbrains/phpstorm-stubs": "2023.1",
+                "jetbrains/phpstorm-stubs": "2023.2",
                 "phpstan/phpstan": "1.12.0",
+                "phpstan/phpstan-phpunit": "1.4.0",
                 "phpstan/phpstan-strict-rules": "^1.6",
-                "phpunit/phpunit": "9.6.20",
-                "psalm/plugin-phpunit": "0.18.4",
+                "phpunit/phpunit": "10.5.30",
+                "psalm/plugin-phpunit": "0.19.0",
                 "slevomat/coding-standard": "8.13.1",
                 "squizlabs/php_codesniffer": "3.10.2",
-                "symfony/cache": "^5.4|^6.0|^7.0",
-                "symfony/console": "^4.4|^5.4|^6.0|^7.0",
-                "vimeo/psalm": "4.30.0"
+                "symfony/cache": "^6.3.8|^7.0",
+                "symfony/console": "^5.4|^6.3|^7.0",
+                "vimeo/psalm": "5.25.0"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
             },
-            "bin": [
-                "bin/doctrine-dbal"
-            ],
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -280,7 +275,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/3.9.1"
+                "source": "https://github.com/doctrine/dbal/tree/4.1.1"
             },
             "funding": [
                 {
@@ -296,7 +291,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-01T13:49:23+00:00"
+            "time": "2024-09-03T08:58:39+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1231,6 +1226,694 @@
             "time": "2024-09-11T07:29:40+00:00"
         },
         {
+            "name": "gember/cache-psr",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/cache-psr.git",
+                "reference": "171fbaea5618dcd652e072ecb0c6d4c066382392"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/cache-psr/zipball/171fbaea5618dcd652e072ecb0c6d4c066382392",
+                "reference": "171fbaea5618dcd652e072ecb0c6d4c066382392",
+                "shasum": ""
+            },
+            "require": {
+                "gember/event-sourcing": "dev-main",
+                "php": "^8.3",
+                "psr/simple-cache": "^3.0"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.5",
+                "symfony/property-access": "^7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\CachePsr\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Gember Cache (gember/event-sourcing) implementation based on psr/simple-cache (PSR-16)",
+            "keywords": [
+                "cache",
+                "cqrs",
+                "ddd",
+                "domain-driven-design",
+                "event-sourcing",
+                "gember",
+                "php-fig",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/cache-psr/issues",
+                "source": "https://github.com/GemberPHP/cache-psr/tree/main"
+            },
+            "time": "2024-10-07T17:47:53+00:00"
+        },
+        {
+            "name": "gember/event-sourcing",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/event-sourcing.git",
+                "reference": "5eeb5eb2c76b82223f7194bcfad1feac6f64057f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/5eeb5eb2c76b82223f7194bcfad1feac6f64057f",
+                "reference": "5eeb5eb2c76b82223f7194bcfad1feac6f64057f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.64",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^11.3",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.7"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\EventSourcing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Let go of the Aggregate - EventSourcing in PHP with DCB (Dynamic Consistency Boundary)",
+            "keywords": [
+                "dcb",
+                "ddd",
+                "domain-driven-design",
+                "dynamic-consistency-boundary",
+                "event-sourcing",
+                "gember"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/event-sourcing/issues",
+                "source": "https://github.com/GemberPHP/event-sourcing/tree/main"
+            },
+            "time": "2024-10-07T17:30:51+00:00"
+        },
+        {
+            "name": "gember/event-sourcing-symfony-bundle",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/event-sourcing-symfony-bundle.git",
+                "reference": "1f4a899ce33c90e3f6091fcf4b6e57ee82f1bf8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/1f4a899ce33c90e3f6091fcf4b6e57ee82f1bf8d",
+                "reference": "1f4a899ce33c90e3f6091fcf4b6e57ee82f1bf8d",
+                "shasum": ""
+            },
+            "require": {
+                "gember/cache-psr": "dev-main",
+                "gember/event-sourcing": "dev-main",
+                "gember/file-finder-symfony": "dev-main",
+                "gember/file-reflector-roave": "dev-main",
+                "gember/identity-generator-symfony": "dev-main",
+                "gember/message-bus-symfony": "dev-main",
+                "gember/rdbms-event-store-doctrine-dbal": "dev-main",
+                "gember/serializer-symfony": "dev-main",
+                "php": "^8.3",
+                "symfony/config": "^7.1",
+                "symfony/console": "^7.1",
+                "symfony/dependency-injection": "^7.1",
+                "symfony/event-dispatcher": "^7.1",
+                "symfony/http-kernel": "^7.1"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.64",
+                "phpstan/phpstan": "^1.12",
+                "rector/rector": "^1.2",
+                "shipmonk/composer-dependency-analyser": "^1.7"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\EventSourcingSymfonyBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Symfony Bundle for Gember Event Sourcing (gember/event-sourcing)",
+            "keywords": [
+                "bundle",
+                "dcb",
+                "ddd",
+                "domain-driven-design",
+                "dynamic-consistency-boundary",
+                "event-sourcing",
+                "gember",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/issues",
+                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/main"
+            },
+            "time": "2024-10-09T17:56:30+00:00"
+        },
+        {
+            "name": "gember/file-finder-symfony",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/file-finder-symfony.git",
+                "reference": "7a6d499bcb8d8172d597bb593569a7a49ac01012"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/file-finder-symfony/zipball/7a6d499bcb8d8172d597bb593569a7a49ac01012",
+                "reference": "7a6d499bcb8d8172d597bb593569a7a49ac01012",
+                "shasum": ""
+            },
+            "require": {
+                "gember/event-sourcing": "dev-main",
+                "php": "^8.3",
+                "symfony/finder": "^7.1"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.5",
+                "symfony/property-access": "^7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\FileFinderSymfony\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Gember File finder (gember/event-sourcing) implementation based on symfony/finder",
+            "keywords": [
+                "cqrs",
+                "ddd",
+                "domain-driven-design",
+                "event-sourcing",
+                "file-finder",
+                "finder",
+                "gember",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/file-finder-symfony/issues",
+                "source": "https://github.com/GemberPHP/file-finder-symfony/tree/main"
+            },
+            "time": "2024-10-07T17:52:30+00:00"
+        },
+        {
+            "name": "gember/file-reflector-roave",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/file-reflector-roave.git",
+                "reference": "2525840b597232b095d0d38d5012505a4e36fc43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/file-reflector-roave/zipball/2525840b597232b095d0d38d5012505a4e36fc43",
+                "reference": "2525840b597232b095d0d38d5012505a4e36fc43",
+                "shasum": ""
+            },
+            "require": {
+                "gember/event-sourcing": "dev-main",
+                "php": "^8.3",
+                "roave/better-reflection": "^6.41"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.5",
+                "symfony/property-access": "^7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\FileReflectorRoave\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Gember File reflector (gember/event-sourcing) implementation based on roave/better-reflection",
+            "keywords": [
+                "better-reflection",
+                "cqrs",
+                "ddd",
+                "domain-driven-design",
+                "event-sourcing",
+                "file-reflector",
+                "gember",
+                "roave"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/file-reflector-roave/issues",
+                "source": "https://github.com/GemberPHP/file-reflector-roave/tree/main"
+            },
+            "time": "2024-10-07T17:56:24+00:00"
+        },
+        {
+            "name": "gember/identity-generator-symfony",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/identity-generator-symfony.git",
+                "reference": "c61f3766b0a83858c3d6a4a2610152edd9e9e1ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/identity-generator-symfony/zipball/c61f3766b0a83858c3d6a4a2610152edd9e9e1ad",
+                "reference": "c61f3766b0a83858c3d6a4a2610152edd9e9e1ad",
+                "shasum": ""
+            },
+            "require": {
+                "gember/event-sourcing": "dev-main",
+                "php": "^8.3",
+                "symfony/uid": "^7.1"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.5",
+                "symfony/property-access": "^7.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\IdentityGeneratorSymfony\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Gember Identity generator (gember/event-sourcing) implementation based on symfony/uid",
+            "keywords": [
+                "UID",
+                "cqrs",
+                "ddd",
+                "domain-driven-design",
+                "event-sourcing",
+                "gember",
+                "identity-generator",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/identity-generator-symfony/issues",
+                "source": "https://github.com/GemberPHP/identity-generator-symfony/tree/main"
+            },
+            "time": "2024-10-07T17:39:54+00:00"
+        },
+        {
+            "name": "gember/message-bus-symfony",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/message-bus-symfony.git",
+                "reference": "cf74a138c39ee82a3924cbc51bc5fac74e03249a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/message-bus-symfony/zipball/cf74a138c39ee82a3924cbc51bc5fac74e03249a",
+                "reference": "cf74a138c39ee82a3924cbc51bc5fac74e03249a",
+                "shasum": ""
+            },
+            "require": {
+                "gember/event-sourcing": "dev-main",
+                "php": "^8.3",
+                "symfony/messenger": "^7.1"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.5",
+                "symfony/property-access": "^7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\MessageBusSymfony\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Gember MessageBus (gember/event-sourcing) implementation based on symfony/messenger",
+            "keywords": [
+                "Messenger",
+                "cqrs",
+                "ddd",
+                "domain-driven-design",
+                "event-sourcing",
+                "gember",
+                "message-bus",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/message-bus-symfony/issues",
+                "source": "https://github.com/GemberPHP/message-bus-symfony/tree/main"
+            },
+            "time": "2024-10-07T18:05:21+00:00"
+        },
+        {
+            "name": "gember/rdbms-event-store-doctrine-dbal",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal.git",
+                "reference": "7857eb2cb08db5aedb63bce440ab16fae874512a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/7857eb2cb08db5aedb63bce440ab16fae874512a",
+                "reference": "7857eb2cb08db5aedb63bce440ab16fae874512a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^4.0",
+                "gember/event-sourcing": "dev-main",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "mockery/mockery": "^1.6",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan-mockery": "^1.1",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.5",
+                "symfony/property-access": "^7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\RdbmsEventStoreDoctrineDbal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Gember Event store (gember/event-sourcing) implementation based on doctrine/dbal",
+            "keywords": [
+                "cqrs",
+                "dbal",
+                "ddd",
+                "doctrine",
+                "domain-driven-design",
+                "event-sourcing",
+                "event-store",
+                "gember"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/issues",
+                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/main"
+            },
+            "time": "2024-10-07T18:54:29+00:00"
+        },
+        {
+            "name": "gember/serializer-symfony",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GemberPHP/serializer-symfony.git",
+                "reference": "4f31151b647a10e81e5c87a9babb43d477cd12e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GemberPHP/serializer-symfony/zipball/4f31151b647a10e81e5c87a9babb43d477cd12e7",
+                "reference": "4f31151b647a10e81e5c87a9babb43d477cd12e7",
+                "shasum": ""
+            },
+            "require": {
+                "gember/event-sourcing": "dev-main",
+                "php": "^8.3",
+                "symfony/serializer": "^7.1"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.23",
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.2",
+                "rregeer/phpunit-coverage-check": "^0.3.1",
+                "shipmonk/composer-dependency-analyser": "^1.5",
+                "symfony/property-access": "^7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gember\\SerializerSymfony\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen de Graaf",
+                    "email": "gember@jero.work",
+                    "homepage": "https://jero.work"
+                }
+            ],
+            "description": "Gember Serializer (gember/event-sourcing) implementation based on symfony/serializer",
+            "keywords": [
+                "cqrs",
+                "ddd",
+                "domain-driven-design",
+                "event-sourcing",
+                "gember",
+                "serializer",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/GemberPHP/serializer-symfony/issues",
+                "source": "https://github.com/GemberPHP/serializer-symfony/tree/main"
+            },
+            "time": "2024-10-07T18:00:19+00:00"
+        },
+        {
+            "name": "jetbrains/phpstorm-stubs",
+            "version": "v2024.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JetBrains/phpstorm-stubs.git",
+                "reference": "cf7e447ddfa7f0cbab0c1dd38392f0cb05f9881c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/cf7e447ddfa7f0cbab0c1dd38392f0cb05f9881c",
+                "reference": "cf7e447ddfa7f0cbab0c1dd38392f0cb05f9881c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "v3.46.0",
+                "nikic/php-parser": "v5.0.0",
+                "phpdocumentor/reflection-docblock": "5.3.0",
+                "phpunit/phpunit": "10.5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "PhpStormStubsMap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "PHP runtime & extensions header files for PhpStorm",
+            "homepage": "https://www.jetbrains.com/phpstorm",
+            "keywords": [
+                "autocomplete",
+                "code",
+                "inference",
+                "inspection",
+                "jetbrains",
+                "phpstorm",
+                "stubs",
+                "type"
+            ],
+            "support": {
+                "source": "https://github.com/JetBrains/phpstorm-stubs/tree/v2024.2"
+            },
+            "time": "2024-06-17T19:18:18+00:00"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "v5.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8eea230464783aa9671db8eea6f8c6ac5285794b",
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "ircmaxell/php-yacc": "^0.0.7",
+                "phpunit/phpunit": "^9.0"
+            },
+            "bin": [
+                "bin/php-parse"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpParser\\": "lib/PhpParser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/nikic/PHP-Parser/issues",
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.1"
+            },
+            "time": "2024-10-08T18:51:32+00:00"
+        },
+        {
             "name": "psr/cache",
             "version": "3.0.0",
             "source": {
@@ -1278,6 +1961,54 @@
                 "source": "https://github.com/php-fig/cache/tree/3.0.0"
             },
             "time": "2021-02-03T23:26:27+00:00"
+        },
+        {
+            "name": "psr/clock",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/clock.git",
+                "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/clock/zipball/e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Clock\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for reading the clock.",
+            "homepage": "https://github.com/php-fig/clock",
+            "keywords": [
+                "clock",
+                "now",
+                "psr",
+                "psr-20",
+                "time"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/clock/issues",
+                "source": "https://github.com/php-fig/clock/tree/1.0.0"
+            },
+            "time": "2022-11-25T14:36:26+00:00"
         },
         {
             "name": "psr/container",
@@ -1431,6 +2162,126 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
             "time": "2024-09-11T13:17:53+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
+            },
+            "time": "2021-10-29T13:26:27+00:00"
+        },
+        {
+            "name": "roave/better-reflection",
+            "version": "6.42.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Roave/BetterReflection.git",
+                "reference": "33da7cb86d659329fea6a3c31d00bd45dd37d83f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/33da7cb86d659329fea6a3c31d00bd45dd37d83f",
+                "reference": "33da7cb86d659329fea6a3c31d00bd45dd37d83f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "jetbrains/phpstorm-stubs": "2024.2",
+                "nikic/php-parser": "^5.1.0",
+                "php": "~8.2.0 || ~8.3.2"
+            },
+            "conflict": {
+                "thecodingmachine/safe": "<1.1.3"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^1.3.1",
+                "phpunit/phpunit": "^11.3.4"
+            },
+            "suggest": {
+                "composer/composer": "Required to use the ComposerSourceLocator"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Roave\\BetterReflection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Titcumb",
+                    "email": "james@asgrim.com",
+                    "homepage": "https://github.com/asgrim"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "https://ocramius.github.io/"
+                },
+                {
+                    "name": "Gary Hockin",
+                    "email": "gary@roave.com",
+                    "homepage": "https://github.com/geeh"
+                },
+                {
+                    "name": "Jaroslav Hanslík",
+                    "email": "kukulich@kukulich.cz",
+                    "homepage": "https://github.com/kukulich"
+                }
+            ],
+            "description": "Better Reflection - an improved code reflection API",
+            "support": {
+                "issues": "https://github.com/Roave/BetterReflection/issues",
+                "source": "https://github.com/Roave/BetterReflection/tree/6.42.0"
+            },
+            "time": "2024-09-12T14:43:53+00:00"
         },
         {
             "name": "symfony/cache",
@@ -1604,6 +2455,80 @@
                 }
             ],
             "time": "2024-04-18T09:32:20+00:00"
+        },
+        {
+            "name": "symfony/clock",
+            "version": "v7.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/clock.git",
+                "reference": "3dfc8b084853586de51dd1441c6242c76a28cbe7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/clock/zipball/3dfc8b084853586de51dd1441c6242c76a28cbe7",
+                "reference": "3dfc8b084853586de51dd1441c6242c76a28cbe7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/clock": "^1.0",
+                "symfony/polyfill-php83": "^1.28"
+            },
+            "provide": {
+                "psr/clock-implementation": "1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/now.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\Clock\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Decouples applications from the system clock",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "clock",
+                "psr20",
+                "time"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/clock/tree/v7.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:57:53+00:00"
         },
         {
             "name": "symfony/config",
@@ -2870,6 +3795,92 @@
             "time": "2024-09-21T06:09:21+00:00"
         },
         {
+            "name": "symfony/messenger",
+            "version": "v7.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/messenger.git",
+                "reference": "e1c0ced845e3dac12ab428c5ed42dbe7a58ca576"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/messenger/zipball/e1c0ced845e3dac12ab428c5ed42dbe7a58ca576",
+                "reference": "e1c0ced845e3dac12ab428c5ed42dbe7a58ca576",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/log": "^1|^2|^3",
+                "symfony/clock": "^6.4|^7.0"
+            },
+            "conflict": {
+                "symfony/console": "<6.4",
+                "symfony/event-dispatcher": "<6.4",
+                "symfony/event-dispatcher-contracts": "<2.5",
+                "symfony/framework-bundle": "<6.4",
+                "symfony/http-kernel": "<6.4",
+                "symfony/serializer": "<6.4"
+            },
+            "require-dev": {
+                "psr/cache": "^1.0|^2.0|^3.0",
+                "symfony/console": "^6.4|^7.0",
+                "symfony/dependency-injection": "^6.4|^7.0",
+                "symfony/event-dispatcher": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0",
+                "symfony/process": "^6.4|^7.0",
+                "symfony/property-access": "^6.4|^7.0",
+                "symfony/rate-limiter": "^6.4|^7.0",
+                "symfony/routing": "^6.4|^7.0",
+                "symfony/serializer": "^6.4|^7.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/stopwatch": "^6.4|^7.0",
+                "symfony/validator": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Messenger\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Roze",
+                    "email": "samuel.roze@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Helps applications send and receive messages to/from other applications or via message queues",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/messenger/tree/v7.1.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-08T12:32:26+00:00"
+        },
+        {
             "name": "symfony/polyfill-intl-grapheme",
             "version": "v1.31.0",
             "source": {
@@ -3185,6 +4196,85 @@
             "time": "2024-09-09T11:45:10+00:00"
         },
         {
+            "name": "symfony/polyfill-uuid",
+            "version": "v1.31.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-uuid.git",
+                "reference": "21533be36c24be3f4b1669c4725c7d1d2bab4ae2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-uuid/zipball/21533be36c24be3f4b1669c4725c7d1d2bab4ae2",
+                "reference": "21533be36c24be3f4b1669c4725c7d1d2bab4ae2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "provide": {
+                "ext-uuid": "*"
+            },
+            "suggest": {
+                "ext-uuid": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Uuid\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for uuid functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "uuid"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-uuid/tree/v1.31.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-09T11:45:10+00:00"
+        },
+        {
             "name": "symfony/routing",
             "version": "v7.1.4",
             "source": {
@@ -3343,6 +4433,105 @@
                 }
             ],
             "time": "2024-05-31T14:55:39+00:00"
+        },
+        {
+            "name": "symfony/serializer",
+            "version": "v7.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/serializer.git",
+                "reference": "71d6e1f70f00752d1469d0f5e83b0a51716f288b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/71d6e1f70f00752d1469d0f5e83b0a51716f288b",
+                "reference": "71d6e1f70f00752d1469d0f5e83b0a51716f288b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "phpdocumentor/reflection-docblock": "<3.2.2",
+                "phpdocumentor/type-resolver": "<1.4.0",
+                "symfony/dependency-injection": "<6.4",
+                "symfony/property-access": "<6.4",
+                "symfony/property-info": "<6.4",
+                "symfony/type-info": "<7.1.5",
+                "symfony/uid": "<6.4",
+                "symfony/validator": "<6.4",
+                "symfony/yaml": "<6.4"
+            },
+            "require-dev": {
+                "phpdocumentor/reflection-docblock": "^3.2|^4.0|^5.0",
+                "phpstan/phpdoc-parser": "^1.0",
+                "seld/jsonlint": "^1.10",
+                "symfony/cache": "^6.4|^7.0",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/console": "^6.4|^7.0",
+                "symfony/dependency-injection": "^6.4|^7.0",
+                "symfony/error-handler": "^6.4|^7.0",
+                "symfony/filesystem": "^6.4|^7.0",
+                "symfony/form": "^6.4|^7.0",
+                "symfony/http-foundation": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0",
+                "symfony/messenger": "^6.4|^7.0",
+                "symfony/mime": "^6.4|^7.0",
+                "symfony/property-access": "^6.4|^7.0",
+                "symfony/property-info": "^6.4|^7.0",
+                "symfony/translation-contracts": "^2.5|^3",
+                "symfony/type-info": "^7.1.5",
+                "symfony/uid": "^6.4|^7.0",
+                "symfony/validator": "^6.4|^7.0",
+                "symfony/var-dumper": "^6.4|^7.0",
+                "symfony/var-exporter": "^6.4|^7.0",
+                "symfony/yaml": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Serializer\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/serializer/tree/v7.1.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-20T12:13:15+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3577,6 +4766,80 @@
             "time": "2024-09-20T08:28:38+00:00"
         },
         {
+            "name": "symfony/uid",
+            "version": "v7.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/uid.git",
+                "reference": "8c7bb8acb933964055215d89f9a9871df0239317"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/uid/zipball/8c7bb8acb933964055215d89f9a9871df0239317",
+                "reference": "8c7bb8acb933964055215d89f9a9871df0239317",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/polyfill-uuid": "^1.15"
+            },
+            "require-dev": {
+                "symfony/console": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Uid\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an object-oriented API to generate and represent UIDs",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "UID",
+                "ulid",
+                "uuid"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/uid/tree/v7.1.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-17T09:16:35+00:00"
+        },
+        {
             "name": "symfony/var-dumper",
             "version": "v7.1.5",
             "source": {
@@ -3809,8 +5072,10 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "gember/event-sourcing-symfony-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -3818,6 +5083,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
