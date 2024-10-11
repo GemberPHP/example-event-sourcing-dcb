@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20a374f670f516b36327f70f2923b1e1",
+    "content-hash": "a1733a3b0e483e92a21572e1a2f3eeb4",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -7043,6 +7043,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "gember/event-sourcing": 20,
         "gember/event-sourcing-symfony-bundle": 20
     },
     "prefer-stable": true,
