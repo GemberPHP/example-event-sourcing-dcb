@@ -1,0 +1,21 @@
+gember_event_sourcing:
+  cache:
+    enabled: true
+    psr6:
+      service: '@cache.app'
+  event_registry:
+    reflector:
+      path: '%kernel.project_dir%/src/Domain'
+  message_bus:
+    symfony:
+      event_bus: '@event.bus'
+  event_store:
+    rdbms:
+      doctrine_dbal:
+        connection: '@doctrine.dbal.default_connection'
+  generator:
+    identity:
+      service: '@gember.identity_generator_symfony.uuid.symfony_uuid_identity_generator'
+  serializer:
+    symfony:
+      serializer: '@serializer'
