@@ -50,3 +50,19 @@ Deliberately this is all what is defined for this domain, to focus on how this c
 It contains both classic aggregates (e.g. [Course](src/Domain/Course/Course.php), [Student](src/Domain/Student/Student.php)) as well as business decision models (e.g. [ChangeCourseCapacity](src/Domain/Course/ChangeCourseCapacity.php), [SubscribeStudentToCourse](src/Domain/StudentToCourseSubscription/SubscribeStudentToCourse.php), [UnsubscribeStudentFromCourse](src/Domain/StudentToCourseSubscription/UnsubscribeStudentFromCourse.php)).
 
 Inspired by other PHP libraries such as [Broadway](https://github.com/broadway), [EventSauce](https://github.com/EventSaucePHP), [Prooph](https://github.com/prooph) and [Ecotone](https://github.com/ecotoneframework) as well as [Axon Framework](https://github.com/AxonFramework) for Java.
+
+### How to run
+First start docker compose for a database
+```
+docker compose up
+```
+
+Then run migrations on your local machine:
+```
+bin/console doctrine:migrations:migrate
+```
+
+You're all set, see what commands you can run:
+```
+bin/console gember
+```
