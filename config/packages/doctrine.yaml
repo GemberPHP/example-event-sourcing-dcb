@@ -15,13 +15,7 @@ doctrine:
         validate_xml_mapping: true
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
-        mappings:
-            Gember\ExampleEventSourcingDcb:
-                type: attribute
-                is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'Gember\ExampleEventSourcingDcb\Entity'
-                alias: Gember\ExampleEventSourcingDcb
+        mappings: ~
         controller_resolver:
             auto_mapping: false
 

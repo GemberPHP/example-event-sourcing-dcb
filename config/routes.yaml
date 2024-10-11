@@ -1,5 +1,5 @@
 controllers:
     resource:
-        path: ../src/Controller/
-        namespace: Gember\ExampleEventSourcingDcb\Controller
+        path: ../src/Infrastructure/Api/Http/Action/
+        namespace: Gember\ExampleEventSourcingDcb\Infrastructure\Api\Http\Action
     type: attribute
