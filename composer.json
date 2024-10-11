@@ -31,6 +31,7 @@
         "symfony/dotenv": "7.1.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.1.*",
+        "symfony/property-access": "7.1.*",
         "symfony/runtime": "7.1.*",
         "symfony/yaml": "7.1.*"
     },
@@ -90,6 +91,7 @@
         "cs:dry-run": "vendor/bin/php-cs-fixer fix --diff --dry-run --config=.php-cs-fixer.php",
         "dependency-analyser": "vendor/bin/composer-dependency-analyser",
         "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon",
+        "phpstan:baseline": "vendor/bin/phpstan analyse -c phpstan.neon --generate-baseline phpstan-baseline.php src",
         "rector": "vendor/bin/rector process --ansi",
         "rector:dry-run": "vendor/bin/rector process --ansi --dry-run",
         "test": [
