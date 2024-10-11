@@ -49,7 +49,7 @@ final class UnsubscribeStudentFromCourse implements EventSourcedDomainContext
         /*
          * Guard for idempotency.
          */
-        if (!$this->isStudentSubscribedToCourse) {
+        if (!($this->isStudentSubscribedToCourse ?? false)) {
             return;
         }
 
@@ -84,16 +84,15 @@ final class UnsubscribeStudentFromCourse implements EventSourcedDomainContext
     private function onStudentCreatedEvent(StudentCreatedEvent $event): void
     {
         $this->studentId = new StudentId($event->studentId);
-        $this->isStudentSubscribedToCourse = false;
     }
 
     #[DomainEventSubscriber]
     private function onStudentSubscribedToCourseEvent(StudentSubscribedToCourseEvent $event): void
     {
-        if (isset($this->studentId)
-            && $this->studentId->equals(new StudentId($event->studentId))
-            && $this->courseId->equals(new CourseId($event->courseId))
-        ) {
+        $studentId = $this->studentId ?? null;
+        $courseId = $this->courseId ?? null;
+
+        if ($studentId?->equals(new StudentId($event->studentId)) && $courseId?->equals(new CourseId($event->courseId))) {
             $this->isStudentSubscribedToCourse = true;
         }
     }
@@ -101,10 +100,10 @@ final class UnsubscribeStudentFromCourse implements EventSourcedDomainContext
     #[DomainEventSubscriber]
     private function onStudentUnsubscribedFromCourseEvent(StudentUnsubscribedFromCourseEvent $event): void
     {
-        if (isset($this->studentId)
-            && $this->studentId->equals(new StudentId($event->studentId))
-            && $this->courseId->equals(new CourseId($event->courseId))
-        ) {
+        $studentId = $this->studentId ?? null;
+        $courseId = $this->courseId ?? null;
+
+        if ($studentId?->equals(new StudentId($event->studentId)) && $courseId?->equals(new CourseId($event->courseId))) {
             $this->isStudentSubscribedToCourse = false;
         }
     }

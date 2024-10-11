@@ -39,8 +39,8 @@ final class SubscribeStudentToCourse implements EventSourcedDomainContext
     /*
      * Use private properties to guard idempotency and protect invariants.
      */
-    private bool $isStudentSubscribedToCourse;
     private int $courseCapacity;
+    private bool $isStudentSubscribedToCourse;
     private int $totalCountSubscriptionsForCourse;
     private int $totalCountSubscriptionsForStudent;
 
@@ -55,7 +55,7 @@ final class SubscribeStudentToCourse implements EventSourcedDomainContext
         /*
          * Guard for idempotency.
          */
-        if ($this->isStudentSubscribedToCourse) {
+        if ($this->isStudentSubscribedToCourse ?? false) {
             return;
         }
 
@@ -83,7 +83,7 @@ final class SubscribeStudentToCourse implements EventSourcedDomainContext
          */
         $this->apply(new StudentSubscribedToCourseEvent((string) $this->courseId, (string) $this->studentId));
 
-        if ($this->totalCountSubscriptionsForCourse+1 >= $this->courseCapacity) {
+        if ($this->totalCountSubscriptionsForCourse >= $this->courseCapacity) {
             $this->apply(new CourseFullyBookedEvent((string) $this->courseId));
         }
     }
@@ -105,7 +105,6 @@ final class SubscribeStudentToCourse implements EventSourcedDomainContext
     {
         $this->studentId = new StudentId($event->studentId);
         $this->totalCountSubscriptionsForStudent = 0;
-        $this->isStudentSubscribedToCourse = false;
     }
 
     #[DomainEventSubscriber]
@@ -117,28 +116,38 @@ final class SubscribeStudentToCourse implements EventSourcedDomainContext
     #[DomainEventSubscriber]
     private function onStudentSubscribedToCourseEvent(StudentSubscribedToCourseEvent $event): void
     {
-        if (isset($this->studentId)
-            && $this->studentId->equals(new StudentId($event->studentId))
-            && $this->courseId->equals(new CourseId($event->courseId))
-        ) {
-            ++$this->totalCountSubscriptionsForStudent;
+        $studentId = $this->studentId ?? null;
+        $courseId = $this->courseId ?? null;
+
+        if ($studentId?->equals(new StudentId($event->studentId)) && $courseId?->equals(new CourseId($event->courseId))) {
             $this->isStudentSubscribedToCourse = true;
         }
 
-        ++$this->totalCountSubscriptionsForCourse;
+        if ($courseId?->equals(new CourseId($event->courseId))) {
+            ++$this->totalCountSubscriptionsForCourse;
+        }
+
+        if ($studentId?->equals(new StudentId($event->studentId))) {
+            ++$this->totalCountSubscriptionsForStudent;
+        }
     }
 
     #[DomainEventSubscriber]
     private function onStudentUnsubscribedFromCourseEvent(StudentUnsubscribedFromCourseEvent $event): void
     {
-        if (isset($this->studentId)
-            && $this->studentId->equals(new StudentId($event->studentId))
-            && $this->courseId->equals(new CourseId($event->courseId))
-        ) {
-            --$this->totalCountSubscriptionsForStudent;
+        $studentId = $this->studentId ?? null;
+        $courseId = $this->courseId ?? null;
+
+        if ($studentId?->equals(new StudentId($event->studentId)) && $courseId?->equals(new CourseId($event->courseId))) {
             $this->isStudentSubscribedToCourse = false;
         }
 
-        --$this->totalCountSubscriptionsForCourse;
+        if ($courseId?->equals(new CourseId($event->courseId))) {
+            --$this->totalCountSubscriptionsForCourse;
+        }
+
+        if ($studentId?->equals(new StudentId($event->studentId))) {
+            --$this->totalCountSubscriptionsForStudent;
+        }
     }
 }
