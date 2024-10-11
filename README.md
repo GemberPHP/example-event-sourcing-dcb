@@ -66,3 +66,8 @@ You're all set, see what commands you can run:
 ```
 bin/console gember
 ```
+
+Or run the demo command to run random sets of commands automatically:
+```
+bin/console gember:demo
+```

@@ -128,6 +128,18 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/Course/RenameCourseCliCommand.php',
 ];
 $ignoreErrors[] = [
+	// identifier: cast.int
+	'message' => '#^Cannot cast mixed to int\\.$#',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoRunCommand.php',
+];
+$ignoreErrors[] = [
+	// identifier: argument.type
+	'message' => '#^Parameter \\#1 \\$min \\(0\\) of function random_int expects lower number than parameter \\#2 \\$max \\(int\\<\\-1, max\\>\\)\\.$#',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoRunCommand.php',
+];
+$ignoreErrors[] = [
 	// identifier: argument.type
 	'message' => '#^Parameter \\#1 \\$studentId of class Gember\\\\ExampleEventSourcingDcb\\\\Application\\\\Command\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourseCommand constructor expects string, mixed given\\.$#',
 	'count' => 1,
