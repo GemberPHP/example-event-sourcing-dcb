@@ -87,7 +87,13 @@ final class DemoRunCommand extends Command
     private function pickAction(): string
     {
         /** @var list<string> $actions */
-        $actions = [...self::ACTIONS_BASE, ...self::ACTIONS_COURSES, ...self::ACTIONS_SUBSCRIPTIONS];
+        $actions = [
+            ...self::ACTIONS_BASE,
+            ...self::ACTIONS_BASE,
+            ...self::ACTIONS_COURSES,
+            ...self::ACTIONS_SUBSCRIPTIONS,
+            ...self::ACTIONS_SUBSCRIPTIONS,
+        ];
 
         return $actions[random_int(0, count($actions) - 1)];
     }
