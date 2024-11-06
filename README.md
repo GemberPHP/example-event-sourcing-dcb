@@ -15,14 +15,13 @@ _From "Domain-Driven Design: Tackling Complexity in the Heart of Software" by Er
 However, Event Sourcing with DCB has some advantages/solves some pitfalls over a traditional aggregate setup.
 
 ### Reusable domain events
-Traditionally, a defined boundary enforces a strict 1-on-1 relation between an aggregate and a domain event.
-This makes the aggregate internally consistent. The DCB pattern removes this strict 1-on-1 relation. Instead, a domain event is considered as a _Pure event_.
+In traditional event sourcing design, there's typically a strict one-to-one relationship between an aggregate and a domain event, which keeps the aggregate internally consistent. 
+However, the DCB pattern removes this restriction by treating domain events as pure events.
 
-This allows us to create business decision/domain models based on a **subset of specific domain events** as well as from **multiple domain identities**.
+This shift allows us to develop business decision models or domain models using specific subsets of domain events, even when they span across multiple domain identities.
 
-These business decision models fit very well in how [EventStorming](https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet) considers aggregates currently.
-Instead of aggregates, in EventStorming, these are now called 'system' or 'consistent business rule',
-as the term 'aggregate' is difficult to explain for non-technical actors in a software design process.
+This approach aligns well with how EventStorming currently conceptualizes aggregates. In [EventStorming](https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet), these are often referred to as “systems” or “consistent business rules” 
+rather than “aggregates” to make the concept more accessible to non-technical participants in the design process.
 
 ### No aggregate synchronisation nor domain services needed
 As a domain event can be used by multiple business decision models, there is no synchronization needed between aggregates.
