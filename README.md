@@ -15,18 +15,22 @@ _From "Domain-Driven Design: Tackling Complexity in the Heart of Software" by Er
 However, Event Sourcing with DCB has some advantages/solves some pitfalls over a traditional aggregate setup.
 
 ### Reusable domain events
-Traditionally, a defined boundary enforces a strict 1-on-1 relation between an aggregate and a domain event.
-This makes the aggregate internally consistent. The DCB pattern removes this strict 1-on-1 relation. Instead, a domain event is considered as a _Pure event_.
+In traditional event sourcing (if we call it like that already 😛), there’s usually a strict one-to-one relation between an aggregate and a domain event, 
+which helps keep things internally consistent within each aggregate. The DCB pattern takes a different approach by loosening this rule and treating domain events as so-called _pure events_.
 
-This allows us to create business decision/domain models based on a **subset of specific domain events** as well as from **multiple domain identities**.
+This opens up new possibilities for building business decision models based on selected domain events, 
+also when these events spread across different domain identities.
 
-These business decision models fit very well in how [EventStorming](https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet) considers aggregates currently.
-Instead of aggregates, in EventStorming, these are now called 'system' or 'consistent business rule',
-as the term 'aggregate' is difficult to explain for non-technical actors in a software design process.
+This approach lines up well with how [EventStorming](https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet) looks at aggregates. 
+In EventStorming, what we typically call aggregates is nowadays seen as "systems" or "consistent business rules", making the concept easier to grasp for non-technical actors involved in the design process.
 
-### No aggregate synchronisation nor domain services needed
-As a domain event can be used by multiple business decision models, there is no synchronization needed between aggregates.
-Duplicated events as well as domain services (typically to handle business logic spanning multiple aggregates) are not needed anymore.
+By replacing aggregates with business decision models with the DCB pattern, we’re aligning more closely with EventStorming’s focus on "business rules".
+This brings our software closer to the actual problem space and avoids so-called _accidental complexity_ that is introduced with the translation to aggregates.
+
+### No need for aggregate synchronization
+With domain events now usable across multiple business decision models, there’s no longer a need for synchronization between aggregates.
+This means that e.g. domain services, which are typically used to manage business logic that spans multiple aggregates, are not needed anymore.
+Also, sagas, used to subscribe to domain events in order to synchronize with other aggregates, are not needed anymore.
 
 ### Concurrency problems
 As an aggregate is based on internal consistency, two concurrent modification are impossible,
