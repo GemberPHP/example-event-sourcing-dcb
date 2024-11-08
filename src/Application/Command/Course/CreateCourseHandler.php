@@ -12,9 +12,6 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
 final readonly class CreateCourseHandler
 {
-    /**
-     * @param DomainContextRepository<Course> $repository
-     */
     public function __construct(
         private DomainContextRepository $repository,
     ) {}

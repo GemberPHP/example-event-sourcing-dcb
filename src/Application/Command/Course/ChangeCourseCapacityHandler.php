@@ -14,9 +14,6 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
 final readonly class ChangeCourseCapacityHandler
 {
-    /**
-     * @param DomainContextRepository<ChangeCourseCapacity> $repository
-     */
     public function __construct(
         private DomainContextRepository $repository,
     ) {}

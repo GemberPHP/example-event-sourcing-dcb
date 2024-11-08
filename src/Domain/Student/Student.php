@@ -11,14 +11,9 @@ use Gember\EventSourcing\DomainContext\EventSourcedDomainContextBehaviorTrait;
 
 /**
  * Traditional aggregate root.
- *
- * @implements EventSourcedDomainContext<Student>
  */
 final class Student implements EventSourcedDomainContext
 {
-    /**
-     * @use EventSourcedDomainContextBehaviorTrait<Student>
-     */
     use EventSourcedDomainContextBehaviorTrait;
 
     /*

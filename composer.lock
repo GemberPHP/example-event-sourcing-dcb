@@ -1360,12 +1360,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing.git",
-                "reference": "5eeb5eb2c76b82223f7194bcfad1feac6f64057f"
+                "reference": "49dec5c8945ac9a304306944abe8ff081076a822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/5eeb5eb2c76b82223f7194bcfad1feac6f64057f",
-                "reference": "5eeb5eb2c76b82223f7194bcfad1feac6f64057f",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/49dec5c8945ac9a304306944abe8ff081076a822",
+                "reference": "49dec5c8945ac9a304306944abe8ff081076a822",
                 "shasum": ""
             },
             "require": {
@@ -1411,7 +1411,7 @@
                 "issues": "https://github.com/GemberPHP/event-sourcing/issues",
                 "source": "https://github.com/GemberPHP/event-sourcing/tree/main"
             },
-            "time": "2024-10-07T17:30:51+00:00"
+            "time": "2024-11-08T11:03:06+00:00"
         },
         {
             "name": "gember/event-sourcing-symfony-bundle",
@@ -7116,6 +7116,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

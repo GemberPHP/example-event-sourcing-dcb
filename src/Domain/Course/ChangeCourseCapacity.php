@@ -11,14 +11,9 @@ use Gember\EventSourcing\DomainContext\EventSourcedDomainContextBehaviorTrait;
 
 /**
  * Business decision model based one domain identifier.
- *
- * @implements EventSourcedDomainContext<ChangeCourseCapacity>
  */
 final class ChangeCourseCapacity implements EventSourcedDomainContext
 {
-    /**
-     * @use EventSourcedDomainContextBehaviorTrait<ChangeCourseCapacity>
-     */
     use EventSourcedDomainContextBehaviorTrait;
 
     /*

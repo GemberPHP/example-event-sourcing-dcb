@@ -18,9 +18,6 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
 final readonly class SubscribeStudentToCourseHandler
 {
-    /**
-     * @param DomainContextRepository<SubscribeStudentToCourse> $repository
-     */
     public function __construct(
         private DomainContextRepository $repository,
     ) {}

@@ -18,14 +18,9 @@ use Gember\ExampleEventSourcingDcb\Domain\Student\StudentNotFoundException;
 
 /**
  * Business decision model based on multiple domain identifiers.
- *
- * @implements EventSourcedDomainContext<SubscribeStudentToCourse>
  */
 final class SubscribeStudentToCourse implements EventSourcedDomainContext
 {
-    /**
-     * @use EventSourcedDomainContextBehaviorTrait<SubscribeStudentToCourse>
-     */
     use EventSourcedDomainContextBehaviorTrait;
 
     /*
