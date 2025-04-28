@@ -27,8 +27,8 @@
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.2",
         "fakerphp/faker": "^1.23",
-        "gember/event-sourcing": "dev-main",
-        "gember/event-sourcing-symfony-bundle": "dev-main",
+        "gember/event-sourcing": "^0.1",
+        "gember/event-sourcing-symfony-bundle": "^0.1",
         "symfony/console": "7.1.*",
         "symfony/dotenv": "7.1.*",
         "symfony/flex": "^2",
@@ -41,8 +41,8 @@
     "require-dev": {
         "captainhook/captainhook": "^5.23",
         "friendsofphp/php-cs-fixer": "^3.58",
-        "phpstan/phpstan": "^1.11",
-        "rector/rector": "^1.2",
+        "phpstan/phpstan": "^2.1",
+        "rector/rector": "^2.0",
         "shipmonk/composer-dependency-analyser": "^1.5"
     },
     "replace": {
