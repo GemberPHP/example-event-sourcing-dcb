@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Domain\StudentToCourseSubscription;
 
-use Gember\EventSourcing\DomainContext\Attribute\DomainEventSubscriber;
-use Gember\EventSourcing\DomainContext\Attribute\DomainId;
-use Gember\EventSourcing\DomainContext\EventSourcedDomainContext;
-use Gember\EventSourcing\DomainContext\EventSourcedDomainContextBehaviorTrait;
+use Gember\EventSourcing\UseCase\Attribute\DomainEventSubscriber;
+use Gember\EventSourcing\UseCase\Attribute\DomainId;
+use Gember\EventSourcing\UseCase\EventSourcedUseCase;
+use Gember\EventSourcing\UseCase\EventSourcedUseCaseBehaviorTrait;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseCreatedEvent;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseNotFoundException;
@@ -16,14 +16,14 @@ use Gember\ExampleEventSourcingDcb\Domain\Student\StudentId;
 use Gember\ExampleEventSourcingDcb\Domain\Student\StudentNotFoundException;
 
 /**
- * Business decision model based on multiple domain identifiers.
+ * Use case based on multiple domain identifiers.
  */
-final class UnsubscribeStudentFromCourse implements EventSourcedDomainContext
+final class UnsubscribeStudentFromCourse implements EventSourcedUseCase
 {
-    use EventSourcedDomainContextBehaviorTrait;
+    use EventSourcedUseCaseBehaviorTrait;
 
     /*
-     * Define to which domain identifiers this context belongs to.
+     * Define to which domain identifiers this use case belongs to.
      */
     #[DomainId]
     private CourseId $courseId;
@@ -67,7 +67,7 @@ final class UnsubscribeStudentFromCourse implements EventSourcedDomainContext
 
     /*
      * Change internal state by subscribing to relevant domain events for any of the domain identifiers,
-     * so that this context can apply its business rules.
+     * so that this use case can apply its business rules.
      */
     #[DomainEventSubscriber]
     private function onCourseCreatedEvent(CourseCreatedEvent $event): void

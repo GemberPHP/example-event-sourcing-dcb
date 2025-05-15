@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Application\Command\StudentToCourseSubscription;
 
-use Gember\EventSourcing\Repository\DomainContextNotFoundException;
-use Gember\EventSourcing\Repository\DomainContextRepository;
-use Gember\EventSourcing\Repository\DomainContextRepositoryFailedException;
+use Gember\EventSourcing\Repository\UseCaseNotFoundException;
+use Gember\EventSourcing\Repository\UseCaseRepository;
+use Gember\EventSourcing\Repository\UseCaseRepositoryFailedException;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseNotFoundException;
 use Gember\ExampleEventSourcingDcb\Domain\Student\StudentId;
@@ -17,26 +17,26 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 final readonly class UnsubscribeStudentFromCourseHandler
 {
     public function __construct(
-        private DomainContextRepository $repository,
+        private UseCaseRepository $repository,
     ) {}
 
     /**
      * @throws CourseNotFoundException
      * @throws StudentNotFoundException
-     * @throws DomainContextNotFoundException
-     * @throws DomainContextRepositoryFailedException
+     * @throws UseCaseNotFoundException
+     * @throws UseCaseRepositoryFailedException
      */
     #[AsMessageHandler(bus: 'command.bus')]
     public function __invoke(UnsubscribeStudentFromCourseCommand $command): void
     {
-        $context = $this->repository->get(
+        $useCase = $this->repository->get(
             UnsubscribeStudentFromCourse::class,
             new CourseId($command->courseId),
             new StudentId($command->studentId),
         );
 
-        $context->unsubscribe();
+        $useCase->unsubscribe();
 
-        $this->repository->save($context);
+        $this->repository->save($useCase);
     }
 }

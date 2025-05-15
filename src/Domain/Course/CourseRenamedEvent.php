@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Domain\Course;
 
-use Gember\EventSourcing\DomainContext\Attribute\DomainEvent;
-use Gember\EventSourcing\DomainContext\Attribute\DomainId;
+use Gember\EventSourcing\UseCase\Attribute\DomainEvent;
+use Gember\EventSourcing\UseCase\Attribute\DomainId;
 
 #[DomainEvent(name: 'course.renamed')]
 final readonly class CourseRenamedEvent
