@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Gember\ExampleEventSourcingDcb\Domain\Course;
 
 use Gember\EventSourcing\UseCase\Attribute\DomainEvent;
-use Gember\EventSourcing\UseCase\Attribute\DomainId;
+use Gember\EventSourcing\UseCase\Attribute\DomainTag;
 
 #[DomainEvent(name: 'course.renamed')]
 final readonly class CourseRenamedEvent
 {
     public function __construct(
-        #[DomainId]
+        #[DomainTag]
         public string $courseId,
         public string $name,
     ) {}

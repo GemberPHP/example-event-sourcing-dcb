@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Gember\ExampleEventSourcingDcb\Domain\StudentToCourseSubscription;
 
 use Gember\EventSourcing\UseCase\Attribute\DomainEventSubscriber;
-use Gember\EventSourcing\UseCase\Attribute\DomainId;
+use Gember\EventSourcing\UseCase\Attribute\DomainTag;
 use Gember\EventSourcing\UseCase\EventSourcedUseCase;
 use Gember\EventSourcing\UseCase\EventSourcedUseCaseBehaviorTrait;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseCapacityChangedEvent;
@@ -17,18 +17,18 @@ use Gember\ExampleEventSourcingDcb\Domain\Student\StudentId;
 use Gember\ExampleEventSourcingDcb\Domain\Student\StudentNotFoundException;
 
 /**
- * Use case based on multiple domain identifiers.
+ * Use case based on multiple domain tags.
  */
 final class SubscribeStudentToCourse implements EventSourcedUseCase
 {
     use EventSourcedUseCaseBehaviorTrait;
 
     /*
-     * Define to which domain identifiers this use case belongs to.
+     * Define to which domain tags this use case belongs to.
      */
-    #[DomainId]
+    #[DomainTag]
     private CourseId $courseId;
-    #[DomainId]
+    #[DomainTag]
     private StudentId $studentId;
 
     /*
@@ -84,7 +84,7 @@ final class SubscribeStudentToCourse implements EventSourcedUseCase
     }
 
     /*
-     * Change internal state by subscribing to relevant domain events for any of the domain identifiers,
+     * Change internal state by subscribing to relevant domain events for any of the domain tags,
      * so that this use case can apply its business rules.
      */
     #[DomainEventSubscriber]

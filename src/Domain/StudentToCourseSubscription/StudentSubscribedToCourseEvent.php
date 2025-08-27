@@ -5,15 +5,15 @@ declare(strict_types=1);
 namespace Gember\ExampleEventSourcingDcb\Domain\StudentToCourseSubscription;
 
 use Gember\EventSourcing\UseCase\Attribute\DomainEvent;
-use Gember\EventSourcing\UseCase\Attribute\DomainId;
+use Gember\EventSourcing\UseCase\Attribute\DomainTag;
 
 #[DomainEvent(name: 'student-to-course-subscription.student-subscribed-to-course')]
 final readonly class StudentSubscribedToCourseEvent
 {
     public function __construct(
-        #[DomainId]
+        #[DomainTag]
         public string $courseId,
-        #[DomainId]
+        #[DomainTag]
         public string $studentId,
     ) {}
 }

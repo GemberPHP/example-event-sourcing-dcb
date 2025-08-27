@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Gember\ExampleEventSourcingDcb\Domain\Course;
 
 use Gember\EventSourcing\UseCase\Attribute\DomainEventSubscriber;
-use Gember\EventSourcing\UseCase\Attribute\DomainId;
+use Gember\EventSourcing\UseCase\Attribute\DomainTag;
 use Gember\EventSourcing\UseCase\EventSourcedUseCase;
 use Gember\EventSourcing\UseCase\EventSourcedUseCaseBehaviorTrait;
 
@@ -17,9 +17,9 @@ final class Course implements EventSourcedUseCase
     use EventSourcedUseCaseBehaviorTrait;
 
     /*
-     * Define to which domain identifiers this use case belongs to.
+     * Define to which domain tags this use case belongs to.
      */
-    #[DomainId]
+    #[DomainTag]
     private CourseId $courseId;
 
     /*
@@ -51,7 +51,7 @@ final class Course implements EventSourcedUseCase
     }
 
     /*
-     * Change internal state by subscribing to relevant domain events for any of the domain identifiers,
+     * Change internal state by subscribing to relevant domain events for any of the domain tags,
      * so that this use case can apply its business rules.
      */
     #[DomainEventSubscriber]

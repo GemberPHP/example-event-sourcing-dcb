@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60a1ee3177effc72c1527de3ff783882",
+    "content-hash": "c22bc7de9ed49811539ea9c12209e859",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -94,34 +94,34 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "4.2.3",
+            "version": "4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "33d2d7fe1269b2301640c44cf2896ea607b30e3e"
+                "reference": "7669f131d43b880de168b2d2df9687d152d6c762"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/33d2d7fe1269b2301640c44cf2896ea607b30e3e",
-                "reference": "33d2d7fe1269b2301640c44cf2896ea607b30e3e",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/7669f131d43b880de168b2d2df9687d152d6c762",
+                "reference": "7669f131d43b880de168b2d2df9687d152d6c762",
                 "shasum": ""
             },
             "require": {
-                "doctrine/deprecations": "^0.5.3|^1",
-                "php": "^8.1",
+                "doctrine/deprecations": "^1.1.5",
+                "php": "^8.2",
                 "psr/cache": "^1|^2|^3",
                 "psr/log": "^1|^2|^3"
             },
             "require-dev": {
-                "doctrine/coding-standard": "12.0.0",
+                "doctrine/coding-standard": "13.0.0",
                 "fig/log-test": "^1",
                 "jetbrains/phpstorm-stubs": "2023.2",
-                "phpstan/phpstan": "2.1.1",
-                "phpstan/phpstan-phpunit": "2.0.3",
+                "phpstan/phpstan": "2.1.17",
+                "phpstan/phpstan-phpunit": "2.0.6",
                 "phpstan/phpstan-strict-rules": "^2",
-                "phpunit/phpunit": "10.5.39",
-                "slevomat/coding-standard": "8.13.1",
-                "squizlabs/php_codesniffer": "3.10.2",
+                "phpunit/phpunit": "11.5.23",
+                "slevomat/coding-standard": "8.16.2",
+                "squizlabs/php_codesniffer": "3.13.1",
                 "symfony/cache": "^6.3.8|^7.0",
                 "symfony/console": "^5.4|^6.3|^7.0"
             },
@@ -180,7 +180,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/4.2.3"
+                "source": "https://github.com/doctrine/dbal/tree/4.3.2"
             },
             "funding": [
                 {
@@ -196,7 +196,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-07T18:29:05+00:00"
+            "time": "2025-08-05T13:30:38+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1190,16 +1190,16 @@
         },
         {
             "name": "gember/event-sourcing",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing.git",
-                "reference": "8c7295d90f4baa12bb2fd1230d23c1ecd1ac5279"
+                "reference": "5a92172dd7348441c09fadbc9ad9d501c049dbb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/8c7295d90f4baa12bb2fd1230d23c1ecd1ac5279",
-                "reference": "8c7295d90f4baa12bb2fd1230d23c1ecd1ac5279",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/5a92172dd7348441c09fadbc9ad9d501c049dbb2",
+                "reference": "5a92172dd7348441c09fadbc9ad9d501c049dbb2",
                 "shasum": ""
             },
             "require": {
@@ -1246,32 +1246,32 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.3.0"
+                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.4.0"
             },
-            "time": "2025-05-10T11:55:15+00:00"
+            "time": "2025-08-27T17:11:40+00:00"
         },
         {
             "name": "gember/event-sourcing-symfony-bundle",
-            "version": "0.3.1",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing-symfony-bundle.git",
-                "reference": "f9a35295634f7883ea32f4ab9f2f1ebe2f5616b7"
+                "reference": "4d3cba22f73584d69bd435c1cb05a4bf6b5e689b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/f9a35295634f7883ea32f4ab9f2f1ebe2f5616b7",
-                "reference": "f9a35295634f7883ea32f4ab9f2f1ebe2f5616b7",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/4d3cba22f73584d69bd435c1cb05a4bf6b5e689b",
+                "reference": "4d3cba22f73584d69bd435c1cb05a4bf6b5e689b",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.3",
-                "gember/file-finder-symfony": "^0.3",
-                "gember/file-reflector-roave": "^0.3",
-                "gember/identity-generator-symfony": "^0.3",
-                "gember/message-bus-symfony": "^0.3",
-                "gember/rdbms-event-store-doctrine-dbal": "^0.3",
-                "gember/serializer-symfony": "^0.3",
+                "gember/event-sourcing": "^0.4.0",
+                "gember/file-finder-symfony": "^0.4.0",
+                "gember/file-reflector-roave": "^0.4.0",
+                "gember/identity-generator-symfony": "^0.4.0",
+                "gember/message-bus-symfony": "^0.4.0",
+                "gember/rdbms-event-store-doctrine-dbal": "^0.4.0",
+                "gember/serializer-symfony": "^0.4.0",
                 "php": "^8.3",
                 "symfony/config": "^7.1|^7.2",
                 "symfony/console": "^7.1|^7.2",
@@ -1317,26 +1317,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.3.1"
+                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.4.0"
             },
-            "time": "2025-05-10T14:22:25+00:00"
+            "time": "2025-08-27T17:51:10+00:00"
         },
         {
             "name": "gember/file-finder-symfony",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/file-finder-symfony.git",
-                "reference": "cb235c506d7032a075172ab9c2ef9264c8745ce8"
+                "reference": "0f0151a9f6320014f4437371150d395f7b321992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/file-finder-symfony/zipball/cb235c506d7032a075172ab9c2ef9264c8745ce8",
-                "reference": "cb235c506d7032a075172ab9c2ef9264c8745ce8",
+                "url": "https://api.github.com/repos/GemberPHP/file-finder-symfony/zipball/0f0151a9f6320014f4437371150d395f7b321992",
+                "reference": "0f0151a9f6320014f4437371150d395f7b321992",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.3",
+                "gember/event-sourcing": "^0.4",
                 "php": "^8.3",
                 "symfony/finder": "^7.1"
             },
@@ -1381,26 +1381,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/file-finder-symfony/issues",
-                "source": "https://github.com/GemberPHP/file-finder-symfony/tree/0.3.0"
+                "source": "https://github.com/GemberPHP/file-finder-symfony/tree/0.4.0"
             },
-            "time": "2025-05-10T11:59:47+00:00"
+            "time": "2025-08-27T17:24:06+00:00"
         },
         {
             "name": "gember/file-reflector-roave",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/file-reflector-roave.git",
-                "reference": "90f56502f6ccd9bf444e725eb62a55ba3496258c"
+                "reference": "693051bf17f0c94dd4b1424ae68375293e10f988"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/file-reflector-roave/zipball/90f56502f6ccd9bf444e725eb62a55ba3496258c",
-                "reference": "90f56502f6ccd9bf444e725eb62a55ba3496258c",
+                "url": "https://api.github.com/repos/GemberPHP/file-reflector-roave/zipball/693051bf17f0c94dd4b1424ae68375293e10f988",
+                "reference": "693051bf17f0c94dd4b1424ae68375293e10f988",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.3",
+                "gember/event-sourcing": "^0.4.0",
                 "php": "^8.3",
                 "roave/better-reflection": "^6.41"
             },
@@ -1445,26 +1445,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/file-reflector-roave/issues",
-                "source": "https://github.com/GemberPHP/file-reflector-roave/tree/0.3.0"
+                "source": "https://github.com/GemberPHP/file-reflector-roave/tree/0.4.0"
             },
-            "time": "2025-05-10T12:00:26+00:00"
+            "time": "2025-08-27T17:21:09+00:00"
         },
         {
             "name": "gember/identity-generator-symfony",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/identity-generator-symfony.git",
-                "reference": "18d9a159dc3a67bebd814ff218a52db26de3182f"
+                "reference": "107ac9b6b293568baf99dd98b5ac1cd83631321c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/identity-generator-symfony/zipball/18d9a159dc3a67bebd814ff218a52db26de3182f",
-                "reference": "18d9a159dc3a67bebd814ff218a52db26de3182f",
+                "url": "https://api.github.com/repos/GemberPHP/identity-generator-symfony/zipball/107ac9b6b293568baf99dd98b5ac1cd83631321c",
+                "reference": "107ac9b6b293568baf99dd98b5ac1cd83631321c",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.3",
+                "gember/event-sourcing": "^0.4.0",
                 "php": "^8.3",
                 "symfony/uid": "^7.1"
             },
@@ -1509,26 +1509,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/identity-generator-symfony/issues",
-                "source": "https://github.com/GemberPHP/identity-generator-symfony/tree/0.3.0"
+                "source": "https://github.com/GemberPHP/identity-generator-symfony/tree/0.4.0"
             },
-            "time": "2025-05-10T12:03:41+00:00"
+            "time": "2025-08-27T17:26:32+00:00"
         },
         {
             "name": "gember/message-bus-symfony",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/message-bus-symfony.git",
-                "reference": "352bcf4466e1bd9d1e7a6989fdb01349a8da81e2"
+                "reference": "d8092a391ad3b584e7a07e793f3c0f9b558d21ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/message-bus-symfony/zipball/352bcf4466e1bd9d1e7a6989fdb01349a8da81e2",
-                "reference": "352bcf4466e1bd9d1e7a6989fdb01349a8da81e2",
+                "url": "https://api.github.com/repos/GemberPHP/message-bus-symfony/zipball/d8092a391ad3b584e7a07e793f3c0f9b558d21ce",
+                "reference": "d8092a391ad3b584e7a07e793f3c0f9b558d21ce",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.3",
+                "gember/event-sourcing": "^0.4.0",
                 "php": "^8.3",
                 "symfony/messenger": "^7.1"
             },
@@ -1573,27 +1573,27 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/message-bus-symfony/issues",
-                "source": "https://github.com/GemberPHP/message-bus-symfony/tree/0.3.0"
+                "source": "https://github.com/GemberPHP/message-bus-symfony/tree/0.4.0"
             },
-            "time": "2025-05-10T12:02:10+00:00"
+            "time": "2025-08-27T17:29:13+00:00"
         },
         {
             "name": "gember/rdbms-event-store-doctrine-dbal",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal.git",
-                "reference": "8d2da144cf0f115bfcecc2a70d91538e6319e06e"
+                "reference": "7b77ea18399545303500ff09b035c6591863affe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/8d2da144cf0f115bfcecc2a70d91538e6319e06e",
-                "reference": "8d2da144cf0f115bfcecc2a70d91538e6319e06e",
+                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/7b77ea18399545303500ff09b035c6591863affe",
+                "reference": "7b77ea18399545303500ff09b035c6591863affe",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^4.0",
-                "gember/event-sourcing": "^0.3",
+                "gember/event-sourcing": "^0.4.0",
                 "php": "^8.3"
             },
             "require-dev": {
@@ -1637,26 +1637,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/issues",
-                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.3.0"
+                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.4.0"
             },
-            "time": "2025-05-10T12:02:47+00:00"
+            "time": "2025-08-27T17:40:00+00:00"
         },
         {
             "name": "gember/serializer-symfony",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/serializer-symfony.git",
-                "reference": "b5646e4b3eab550a6e58dc37ffa5467561e469fc"
+                "reference": "a1fe41c4d00397fd48ba329dbccfe9dd2f00bc82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/serializer-symfony/zipball/b5646e4b3eab550a6e58dc37ffa5467561e469fc",
-                "reference": "b5646e4b3eab550a6e58dc37ffa5467561e469fc",
+                "url": "https://api.github.com/repos/GemberPHP/serializer-symfony/zipball/a1fe41c4d00397fd48ba329dbccfe9dd2f00bc82",
+                "reference": "a1fe41c4d00397fd48ba329dbccfe9dd2f00bc82",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.3",
+                "gember/event-sourcing": "^0.4.0",
                 "php": "^8.3",
                 "symfony/serializer": "^7.1"
             },
@@ -1700,9 +1700,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/serializer-symfony/issues",
-                "source": "https://github.com/GemberPHP/serializer-symfony/tree/0.3.0"
+                "source": "https://github.com/GemberPHP/serializer-symfony/tree/0.4.0"
             },
-            "time": "2025-05-10T12:01:32+00:00"
+            "time": "2025-08-27T17:17:41+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
@@ -1753,16 +1753,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.4.0",
+            "version": "v5.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "447a020a1f875a434d62f2a401f53b82a396e494"
+                "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/447a020a1f875a434d62f2a401f53b82a396e494",
-                "reference": "447a020a1f875a434d62f2a401f53b82a396e494",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
+                "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
                 "shasum": ""
             },
             "require": {
@@ -1781,7 +1781,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.x-dev"
                 }
             },
             "autoload": {
@@ -1805,9 +1805,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.1"
             },
-            "time": "2024-12-30T11:07:19+00:00"
+            "time": "2025-08-13T20:13:15+00:00"
         },
         {
             "name": "psr/cache",
@@ -2112,30 +2112,30 @@
         },
         {
             "name": "roave/better-reflection",
-            "version": "6.57.0",
+            "version": "6.60.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/BetterReflection.git",
-                "reference": "d5fa8e106a1a046ea9b9a79e4ce95c6b6c158ae0"
+                "reference": "53dd01710b5c705b1b570a1820bd65e70529ebc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/d5fa8e106a1a046ea9b9a79e4ce95c6b6c158ae0",
-                "reference": "d5fa8e106a1a046ea9b9a79e4ce95c6b6c158ae0",
+                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/53dd01710b5c705b1b570a1820bd65e70529ebc7",
+                "reference": "53dd01710b5c705b1b570a1820bd65e70529ebc7",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "jetbrains/phpstorm-stubs": "2024.3",
-                "nikic/php-parser": "^5.4.0",
-                "php": "~8.2.0 || ~8.3.2 || ~8.4.1"
+                "nikic/php-parser": "^5.6.0",
+                "php": "~8.2.0 || ~8.3.2 || ~8.4.1 || ~8.5.0"
             },
             "conflict": {
                 "thecodingmachine/safe": "<1.1.3"
             },
             "require-dev": {
-                "phpbench/phpbench": "^1.4.0",
-                "phpunit/phpunit": "^11.5.7"
+                "phpbench/phpbench": "^1.4.1",
+                "phpunit/phpunit": "^11.5.28"
             },
             "suggest": {
                 "composer/composer": "Required to use the ComposerSourceLocator"
@@ -2175,9 +2175,9 @@
             "description": "Better Reflection - an improved code reflection API",
             "support": {
                 "issues": "https://github.com/Roave/BetterReflection/issues",
-                "source": "https://github.com/Roave/BetterReflection/tree/6.57.0"
+                "source": "https://github.com/Roave/BetterReflection/tree/6.60.0"
             },
-            "time": "2025-02-12T20:28:58+00:00"
+            "time": "2025-08-21T11:08:59+00:00"
         },
         {
             "name": "symfony/cache",
@@ -2676,16 +2676,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.5.1",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6"
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
-                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
                 "shasum": ""
             },
             "require": {
@@ -2698,7 +2698,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.5-dev"
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -2723,7 +2723,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.1"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -2739,7 +2739,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/doctrine-bridge",
@@ -3080,16 +3080,16 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.5.1",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f"
+                "reference": "59eb412e93815df44f05f342958efa9f46b1e586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/7642f5e970b672283b7823222ae8ef8bbc160b9f",
-                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/59eb412e93815df44f05f342958efa9f46b1e586",
+                "reference": "59eb412e93815df44f05f342958efa9f46b1e586",
                 "shasum": ""
             },
             "require": {
@@ -3103,7 +3103,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.5-dev"
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -3136,7 +3136,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.1"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -3152,7 +3152,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -3779,16 +3779,16 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe"
+                "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe",
-                "reference": "b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/380872130d3a5dd3ace2f4010d95125fde5d5c70",
+                "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70",
                 "shasum": ""
             },
             "require": {
@@ -3837,7 +3837,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -3849,15 +3849,19 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T11:45:10+00:00"
+            "time": "2025-06-27T09:58:17+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -3918,7 +3922,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -3930,6 +3934,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -3938,7 +3946,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -3999,7 +4007,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -4011,6 +4019,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -4019,16 +4031,16 @@
         },
         {
             "name": "symfony/polyfill-php83",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491"
+                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/2fb86d65e2d424369ad2905e83b236a8805ba491",
-                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/17f6f9a6b1735c0f163024d959f700cfbc5155e5",
+                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5",
                 "shasum": ""
             },
             "require": {
@@ -4075,7 +4087,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -4087,24 +4099,28 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T11:45:10+00:00"
+            "time": "2025-07-08T02:45:35+00:00"
         },
         {
             "name": "symfony/polyfill-php84",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php84.git",
-                "reference": "000df7860439609837bbe28670b0be15783b7fbf"
+                "reference": "d8ced4d875142b6a7426000426b8abc631d6b191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php84/zipball/000df7860439609837bbe28670b0be15783b7fbf",
-                "reference": "000df7860439609837bbe28670b0be15783b7fbf",
+                "url": "https://api.github.com/repos/symfony/polyfill-php84/zipball/d8ced4d875142b6a7426000426b8abc631d6b191",
+                "reference": "d8ced4d875142b6a7426000426b8abc631d6b191",
                 "shasum": ""
             },
             "require": {
@@ -4151,7 +4167,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php84/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php84/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -4163,15 +4179,19 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-20T12:04:08+00:00"
+            "time": "2025-06-24T13:30:11+00:00"
         },
         {
             "name": "symfony/polyfill-uuid",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-uuid.git",
@@ -4230,7 +4250,7 @@
                 "uuid"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-uuid/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-uuid/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -4239,6 +4259,10 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
                     "type": "github"
                 },
                 {
@@ -4670,16 +4694,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.5.1",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0"
+                "reference": "f021b05a130d35510bd6b25fe9053c2a8a15d5d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
-                "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
+                "reference": "f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
                 "shasum": ""
             },
             "require": {
@@ -4697,7 +4721,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.5-dev"
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -4733,7 +4757,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.5.1"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -4749,7 +4773,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2025-04-25T09:37:31+00:00"
         },
         {
             "name": "symfony/stopwatch",
