@@ -57,21 +57,10 @@ final class SubscribeStudentToCourse implements EventSourcedUseCase
         /*
          * Protect invariants (business rules).
          */
-        if (!isset($this->courseId)) {
-            throw CourseNotFoundException::create();
-        }
-
-        if (!isset($this->studentId)) {
-            throw StudentNotFoundException::create();
-        }
-
-        if ($this->totalCountSubscriptionsForCourse >= $this->courseCapacity) {
-            throw CourseCannotAcceptMoreStudentsException::create();
-        }
-
-        if ($this->totalCountSubscriptionsForStudent >= 10) {
-            throw StudentCannotSubscribeToMoreCoursesException::create();
-        }
+        $this->assertCourseExists();
+        $this->assertStudentExists();
+        $this->assertCourseHasSpotsAvailable();
+        $this->assertStudentCanSubscribeToMoreCourses();
 
         /*
          * Apply events when all business rules are met.
@@ -80,6 +69,46 @@ final class SubscribeStudentToCourse implements EventSourcedUseCase
 
         if ($this->totalCountSubscriptionsForCourse >= $this->courseCapacity) {
             $this->apply(new CourseFullyBookedEvent((string) $this->courseId));
+        }
+    }
+
+    /**
+     * @throws CourseNotFoundException
+     */
+    private function assertCourseExists(): void
+    {
+        if (!isset($this->courseId)) {
+            throw CourseNotFoundException::create();
+        }
+    }
+
+    /**
+     * @throws StudentNotFoundException
+     */
+    private function assertStudentExists(): void
+    {
+        if (!isset($this->studentId)) {
+            throw StudentNotFoundException::create();
+        }
+    }
+
+    /**
+     * @throws CourseCannotAcceptMoreStudentsException
+     */
+    private function assertCourseHasSpotsAvailable(): void
+    {
+        if ($this->totalCountSubscriptionsForCourse >= $this->courseCapacity) {
+            throw CourseCannotAcceptMoreStudentsException::create();
+        }
+    }
+
+    /**
+     * @throws StudentCannotSubscribeToMoreCoursesException
+     */
+    private function assertStudentCanSubscribeToMoreCourses(): void
+    {
+        if ($this->totalCountSubscriptionsForStudent >= 10) {
+            throw StudentCannotSubscribeToMoreCoursesException::create();
         }
     }
 

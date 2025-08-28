@@ -51,18 +51,33 @@ final class UnsubscribeStudentFromCourse implements EventSourcedUseCase
         /*
          * Protect invariants (business rules).
          */
-        if (!isset($this->courseId)) {
-            throw CourseNotFoundException::create();
-        }
-
-        if (!isset($this->studentId)) {
-            throw StudentNotFoundException::create();
-        }
+        $this->assertCourseExists();
+        $this->assertStudentExists();
 
         /*
          * Apply events when all business rules are met.
          */
         $this->apply(new StudentUnsubscribedFromCourseEvent((string) $this->courseId, (string) $this->studentId));
+    }
+
+    /**
+     * @throws CourseNotFoundException
+     */
+    private function assertCourseExists(): void
+    {
+        if (!isset($this->courseId)) {
+            throw CourseNotFoundException::create();
+        }
+    }
+
+    /**
+     * @throws StudentNotFoundException
+     */
+    private function assertStudentExists(): void
+    {
+        if (!isset($this->studentId)) {
+            throw StudentNotFoundException::create();
+        }
     }
 
     /*

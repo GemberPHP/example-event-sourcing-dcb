@@ -42,14 +42,22 @@ final class ChangeCourseCapacity implements EventSourcedUseCase
         /*
          * Protect invariants (business rules).
          */
-        if (!isset($this->courseId)) {
-            throw CourseNotFoundException::create();
-        }
+        $this->assertCourseExists();
 
         /*
          * Apply events when all business rules are met.
          */
         $this->apply(new CourseCapacityChangedEvent((string) $this->courseId, $capacity));
+    }
+
+    /**
+     * @throws CourseNotFoundException
+     */
+    private function assertCourseExists(): void
+    {
+        if (!isset($this->courseId)) {
+            throw CourseNotFoundException::create();
+        }
     }
 
     /*
