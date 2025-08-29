@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command\StudentToCourseSubscription;
 
-use Gember\ExampleEventSourcingDcb\Application\Command\StudentToCourseSubscription\UnsubscribeStudentFromCourseCommand;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
+use Gember\ExampleEventSourcingDcb\Domain\Student\StudentId;
+use Gember\ExampleEventSourcingDcb\Domain\UnsubscribeStudentFromCourse\UnsubscribeStudentFromCourseCommand;
 use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -36,8 +38,8 @@ final class UnsubscribeStudentFromCourseCliCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->commandBus->dispatch(new UnsubscribeStudentFromCourseCommand(
-            $input->getArgument('studentId'),
-            $input->getArgument('courseId'),
+            new StudentId($input->getArgument('studentId')),
+            new CourseId($input->getArgument('courseId')),
         ));
 
         $output->write('Student # ' . $input->getArgument('studentId') . ' unsubscribed from course #' . $input->getArgument('courseId'));

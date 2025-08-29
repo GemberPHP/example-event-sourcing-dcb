@@ -62,7 +62,7 @@ final class Course implements EventSourcedUseCase
     }
 
     #[DomainEventSubscriber]
-    private function onCourseNameChangedEvent(CourseRenamedEvent $event): void
+    private function onCourseRenamedEvent(CourseRenamedEvent $event): void
     {
         $this->name = $event->name;
     }

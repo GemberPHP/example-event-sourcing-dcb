@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command\StudentToCourseSubscription;
 
-use Gember\ExampleEventSourcingDcb\Application\Command\StudentToCourseSubscription\SubscribeStudentToCourseCommand;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
+use Gember\ExampleEventSourcingDcb\Domain\Student\StudentId;
+use Gember\ExampleEventSourcingDcb\Domain\SubscribeStudentToCourse\SubscribeStudentToCourseCommand;
 use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -36,8 +38,8 @@ final class SubscribeStudentToCourseCliCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->commandBus->dispatch(new SubscribeStudentToCourseCommand(
-            $input->getArgument('studentId'),
-            $input->getArgument('courseId'),
+            new StudentId($input->getArgument('studentId')),
+            new CourseId($input->getArgument('courseId')),
         ));
 
         $output->write('Student # ' . $input->getArgument('studentId') . ' subscribed to course #' . $input->getArgument('courseId'));

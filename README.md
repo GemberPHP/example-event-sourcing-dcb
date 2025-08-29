@@ -10,7 +10,7 @@ Instead, a hybrid solution with aggregates and use cases is probably more likely
 This example project is using a fictive domain (taken from Sara Pellegrini's blog) where students can subscribe to courses (of any kind).
 Deliberately this is all what is defined for this domain, to focus on how this could be implemented when using Event Sourcing with the DCB pattern in mind.
 
-It contains both classic aggregates (e.g. [Course](src/Domain/Course/Course.php), [Student](src/Domain/Student/Student.php)) as well as use cases (e.g. [ChangeCourseCapacity](src/Domain/Course/ChangeCourseCapacity.php), [SubscribeStudentToCourse](src/Domain/StudentToCourseSubscription/SubscribeStudentToCourse.php), [UnsubscribeStudentFromCourse](src/Domain/StudentToCourseSubscription/UnsubscribeStudentFromCourse.php)).
+It contains both classic aggregates (e.g. [Course](src/Domain/Course/Course.php), [Student](src/Domain/Student/Student.php)) as well as use cases (e.g. [ChangeCourseCapacity](src/Domain/ChangeCourseCapacity/ChangeCourseCapacity.php), [SubscribeStudentToCourse](src/Domain/SubscribeStudentToCourse/SubscribeStudentToCourse.php), [UnsubscribeStudentFromCourse](src/Domain/UnsubscribeStudentFromCourse/UnsubscribeStudentFromCourse.php)).
 
 Inspired by other PHP libraries such as [Broadway](https://github.com/broadway), [EventSauce](https://github.com/EventSaucePHP), [Prooph](https://github.com/prooph) and [Ecotone](https://github.com/ecotoneframework) as well as [Axon Framework](https://github.com/AxonFramework) for Java.
 

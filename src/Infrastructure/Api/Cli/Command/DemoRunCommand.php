@@ -6,12 +6,14 @@ namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command;
 
 use Faker\Factory;
 use Gember\EventSourcing\Util\Generator\Identity\IdentityGenerator;
-use Gember\ExampleEventSourcingDcb\Application\Command\Course\ChangeCourseCapacityCommand;
+use Gember\ExampleEventSourcingDcb\Domain\ChangeCourseCapacity\ChangeCourseCapacityCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Course\CreateCourseCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Course\RenameCourseCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Student\CreateStudentCommand;
-use Gember\ExampleEventSourcingDcb\Application\Command\StudentToCourseSubscription\SubscribeStudentToCourseCommand;
-use Gember\ExampleEventSourcingDcb\Application\Command\StudentToCourseSubscription\UnsubscribeStudentFromCourseCommand;
+use Gember\ExampleEventSourcingDcb\Domain\Student\StudentId;
+use Gember\ExampleEventSourcingDcb\Domain\SubscribeStudentToCourse\SubscribeStudentToCourseCommand;
+use Gember\ExampleEventSourcingDcb\Domain\UnsubscribeStudentFromCourse\UnsubscribeStudentFromCourseCommand;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -157,7 +159,7 @@ final class DemoRunCommand extends Command
 
         $this->output->writeln(sprintf(' <info>Change course %s capacity to %d</info>', $courseId, $capacity));
 
-        $this->commandBus->dispatch(new ChangeCourseCapacityCommand($courseId, $capacity));
+        $this->commandBus->dispatch(new ChangeCourseCapacityCommand(new CourseId($courseId), $capacity));
     }
 
     private function subscribeStudentToCourse(): void
@@ -174,8 +176,8 @@ final class DemoRunCommand extends Command
         $this->output->writeln(sprintf(' <info>Subscribe student %s to course %s</info>', $studentId, $courseId));
 
         $this->commandBus->dispatch(new SubscribeStudentToCourseCommand(
-            $studentId,
-            $courseId,
+            new StudentId($studentId),
+            new CourseId($courseId),
         ));
     }
 
@@ -193,8 +195,8 @@ final class DemoRunCommand extends Command
         $this->output->writeln(sprintf(' <info>Unsubscribe student %s from course %s</info>', $studentId, $courseId));
 
         $this->commandBus->dispatch(new UnsubscribeStudentFromCourseCommand(
-            $studentId,
-            $courseId,
+            new StudentId($studentId),
+            new CourseId($courseId),
         ));
     }
 }

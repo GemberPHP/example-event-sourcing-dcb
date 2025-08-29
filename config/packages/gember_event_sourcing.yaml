@@ -3,12 +3,17 @@ gember_event_sourcing:
     enabled: true
     psr6:
       service: '@cache.app'
-  event_registry:
-    reflector:
-      path: '%kernel.project_dir%/src/Domain'
+  registry:
+    event:
+      reflector:
+        path: '%kernel.project_dir%/src/Domain'
+    command_handler:
+      reflector:
+        path: '%kernel.project_dir%/src/Domain'
   message_bus:
     symfony:
       event_bus: '@event.bus'
+      command_bus: '@command.bus'
   event_store:
     rdbms:
       doctrine_dbal:

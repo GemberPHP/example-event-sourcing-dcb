@@ -2,12 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Gember\ExampleEventSourcingDcb\Domain\Course;
+namespace Gember\ExampleEventSourcingDcb\Domain\ChangeCourseCapacity;
 
+use Gember\EventSourcing\UseCase\Attribute\DomainCommandHandler;
 use Gember\EventSourcing\UseCase\Attribute\DomainEventSubscriber;
 use Gember\EventSourcing\UseCase\Attribute\DomainTag;
 use Gember\EventSourcing\UseCase\EventSourcedUseCase;
 use Gember\EventSourcing\UseCase\EventSourcedUseCaseBehaviorTrait;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseCreatedEvent;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseNotFoundException;
 
 /**
  * Use case based one domain tag.
@@ -30,12 +34,13 @@ final class ChangeCourseCapacity implements EventSourcedUseCase
     /**
      * @throws CourseNotFoundException
      */
-    public function changeCapacity(int $capacity): void
+    #[DomainCommandHandler]
+    public function __invoke(ChangeCourseCapacityCommand $command): void
     {
         /*
          * Guard for idempotency.
          */
-        if ($this->capacity === $capacity) {
+        if ($this->capacity === $command->capacity) {
             return;
         }
 
@@ -47,7 +52,7 @@ final class ChangeCourseCapacity implements EventSourcedUseCase
         /*
          * Apply events when all business rules are met.
          */
-        $this->apply(new CourseCapacityChangedEvent((string) $this->courseId, $capacity));
+        $this->apply(new CourseCapacityChangedEvent((string) $this->courseId, $command->capacity));
     }
 
     /**

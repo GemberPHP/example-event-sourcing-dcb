@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Gember\ExampleEventSourcingDcb\Domain\StudentToCourseSubscription;
+namespace Gember\ExampleEventSourcingDcb\Domain\SubscribeStudentToCourse;
 
 use Gember\EventSourcing\UseCase\Attribute\DomainEvent;
 use Gember\EventSourcing\UseCase\Attribute\DomainTag;

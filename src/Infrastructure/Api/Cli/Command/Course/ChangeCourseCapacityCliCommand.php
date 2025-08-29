@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command\Course;
 
-use Gember\ExampleEventSourcingDcb\Application\Command\Course\ChangeCourseCapacityCommand;
+use Gember\ExampleEventSourcingDcb\Domain\ChangeCourseCapacity\ChangeCourseCapacityCommand;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
 use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -36,7 +37,7 @@ final class ChangeCourseCapacityCliCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->commandBus->dispatch(new ChangeCourseCapacityCommand(
-            $input->getArgument('courseId'),
+            new CourseId($input->getArgument('courseId')),
             (int) $input->getArgument('capacity'),
         ));
 
