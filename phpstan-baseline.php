@@ -2,16 +2,16 @@
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\ChangeCourseCapacity\\:\\:onCourseCapacityChangedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\ChangeCourseCapacity\\\\ChangeCourseCapacity\\:\\:onCourseCapacityChangedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/Course/ChangeCourseCapacity.php',
+	'path' => __DIR__ . '/src/Domain/ChangeCourseCapacity/ChangeCourseCapacity.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\ChangeCourseCapacity\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\ChangeCourseCapacity\\\\ChangeCourseCapacity\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/Course/ChangeCourseCapacity.php',
+	'path' => __DIR__ . '/src/Domain/ChangeCourseCapacity/ChangeCourseCapacity.php',
 ];
 $ignoreErrors[] = [
 	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\Course\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
@@ -20,7 +20,7 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Domain/Course/Course.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\Course\\:\\:onCourseNameChangedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\Course\\:\\:onCourseRenamedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
 	'path' => __DIR__ . '/src/Domain/Course/Course.php',
@@ -38,58 +38,58 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Domain/Student/Student.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourse\\:\\:onCourseCapacityChangedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\SubscribeStudentToCourse\\\\SubscribeStudentToCourse\\:\\:onCourseCapacityChangedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/SubscribeStudentToCourse.php',
+	'path' => __DIR__ . '/src/Domain/SubscribeStudentToCourse/SubscribeStudentToCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourse\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\SubscribeStudentToCourse\\\\SubscribeStudentToCourse\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/SubscribeStudentToCourse.php',
+	'path' => __DIR__ . '/src/Domain/SubscribeStudentToCourse/SubscribeStudentToCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourse\\:\\:onStudentCreatedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\SubscribeStudentToCourse\\\\SubscribeStudentToCourse\\:\\:onStudentCreatedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/SubscribeStudentToCourse.php',
+	'path' => __DIR__ . '/src/Domain/SubscribeStudentToCourse/SubscribeStudentToCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourse\\:\\:onStudentSubscribedToCourseEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\SubscribeStudentToCourse\\\\SubscribeStudentToCourse\\:\\:onStudentSubscribedToCourseEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/SubscribeStudentToCourse.php',
+	'path' => __DIR__ . '/src/Domain/SubscribeStudentToCourse/SubscribeStudentToCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourse\\:\\:onStudentUnsubscribedFromCourseEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\SubscribeStudentToCourse\\\\SubscribeStudentToCourse\\:\\:onStudentUnsubscribedFromCourseEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/SubscribeStudentToCourse.php',
+	'path' => __DIR__ . '/src/Domain/SubscribeStudentToCourse/SubscribeStudentToCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\UnsubscribeStudentFromCourse\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\UnsubscribeStudentFromCourse\\\\UnsubscribeStudentFromCourse\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/UnsubscribeStudentFromCourse.php',
+	'path' => __DIR__ . '/src/Domain/UnsubscribeStudentFromCourse/UnsubscribeStudentFromCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\UnsubscribeStudentFromCourse\\:\\:onStudentCreatedEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\UnsubscribeStudentFromCourse\\\\UnsubscribeStudentFromCourse\\:\\:onStudentCreatedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/UnsubscribeStudentFromCourse.php',
+	'path' => __DIR__ . '/src/Domain/UnsubscribeStudentFromCourse/UnsubscribeStudentFromCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\UnsubscribeStudentFromCourse\\:\\:onStudentSubscribedToCourseEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\UnsubscribeStudentFromCourse\\\\UnsubscribeStudentFromCourse\\:\\:onStudentSubscribedToCourseEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/UnsubscribeStudentFromCourse.php',
+	'path' => __DIR__ . '/src/Domain/UnsubscribeStudentFromCourse/UnsubscribeStudentFromCourse.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\StudentToCourseSubscription\\\\UnsubscribeStudentFromCourse\\:\\:onStudentUnsubscribedFromCourseEvent\\(\\) is unused\\.$#',
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\UnsubscribeStudentFromCourse\\\\UnsubscribeStudentFromCourse\\:\\:onStudentUnsubscribedFromCourseEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
-	'path' => __DIR__ . '/src/Domain/StudentToCourseSubscription/UnsubscribeStudentFromCourse.php',
+	'path' => __DIR__ . '/src/Domain/UnsubscribeStudentFromCourse/UnsubscribeStudentFromCourse.php',
 ];
 $ignoreErrors[] = [
 	'message' => '#^Binary operation "\\." between \'Course capacity…\' and mixed results in an error\\.$#',
@@ -104,7 +104,7 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/Course/ChangeCourseCapacityCliCommand.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#1 \\$courseId of class Gember\\\\ExampleEventSourcingDcb\\\\Application\\\\Command\\\\Course\\\\ChangeCourseCapacityCommand constructor expects string, mixed given\\.$#',
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\CourseId constructor expects string, mixed given\\.$#',
 	'identifier' => 'argument.type',
 	'count' => 1,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/Course/ChangeCourseCapacityCliCommand.php',
@@ -164,13 +164,13 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/StudentToCourseSubscription/SubscribeStudentToCourseCliCommand.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#1 \\$studentId of class Gember\\\\ExampleEventSourcingDcb\\\\Application\\\\Command\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourseCommand constructor expects string, mixed given\\.$#',
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\CourseId constructor expects string, mixed given\\.$#',
 	'identifier' => 'argument.type',
 	'count' => 1,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/StudentToCourseSubscription/SubscribeStudentToCourseCliCommand.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#2 \\$courseId of class Gember\\\\ExampleEventSourcingDcb\\\\Application\\\\Command\\\\StudentToCourseSubscription\\\\SubscribeStudentToCourseCommand constructor expects string, mixed given\\.$#',
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Student\\\\StudentId constructor expects string, mixed given\\.$#',
 	'identifier' => 'argument.type',
 	'count' => 1,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/StudentToCourseSubscription/SubscribeStudentToCourseCliCommand.php',
@@ -188,13 +188,13 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/StudentToCourseSubscription/UnsubscribeStudentFromCourseCliCommand.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#1 \\$studentId of class Gember\\\\ExampleEventSourcingDcb\\\\Application\\\\Command\\\\StudentToCourseSubscription\\\\UnsubscribeStudentFromCourseCommand constructor expects string, mixed given\\.$#',
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\CourseId constructor expects string, mixed given\\.$#',
 	'identifier' => 'argument.type',
 	'count' => 1,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/StudentToCourseSubscription/UnsubscribeStudentFromCourseCliCommand.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#2 \\$courseId of class Gember\\\\ExampleEventSourcingDcb\\\\Application\\\\Command\\\\StudentToCourseSubscription\\\\UnsubscribeStudentFromCourseCommand constructor expects string, mixed given\\.$#',
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Student\\\\StudentId constructor expects string, mixed given\\.$#',
 	'identifier' => 'argument.type',
 	'count' => 1,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/StudentToCourseSubscription/UnsubscribeStudentFromCourseCliCommand.php',
