@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c22bc7de9ed49811539ea9c12209e859",
+    "content-hash": "b4463b6854f60b4b0b3ff986e1c39b73",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -1190,16 +1190,16 @@
         },
         {
             "name": "gember/event-sourcing",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing.git",
-                "reference": "5a92172dd7348441c09fadbc9ad9d501c049dbb2"
+                "reference": "082dd738f1de95cd28d99ad29103366d5a3e7840"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/5a92172dd7348441c09fadbc9ad9d501c049dbb2",
-                "reference": "5a92172dd7348441c09fadbc9ad9d501c049dbb2",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/082dd738f1de95cd28d99ad29103366d5a3e7840",
+                "reference": "082dd738f1de95cd28d99ad29103366d5a3e7840",
                 "shasum": ""
             },
             "require": {
@@ -1246,32 +1246,32 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.5.0"
             },
-            "time": "2025-08-27T17:11:40+00:00"
+            "time": "2025-08-29T13:46:42+00:00"
         },
         {
             "name": "gember/event-sourcing-symfony-bundle",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing-symfony-bundle.git",
-                "reference": "4d3cba22f73584d69bd435c1cb05a4bf6b5e689b"
+                "reference": "47034390efab5a7c96bed5f693205cfd6552d5ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/4d3cba22f73584d69bd435c1cb05a4bf6b5e689b",
-                "reference": "4d3cba22f73584d69bd435c1cb05a4bf6b5e689b",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/47034390efab5a7c96bed5f693205cfd6552d5ef",
+                "reference": "47034390efab5a7c96bed5f693205cfd6552d5ef",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.4.0",
-                "gember/file-finder-symfony": "^0.4.0",
-                "gember/file-reflector-roave": "^0.4.0",
-                "gember/identity-generator-symfony": "^0.4.0",
-                "gember/message-bus-symfony": "^0.4.0",
-                "gember/rdbms-event-store-doctrine-dbal": "^0.4.0",
-                "gember/serializer-symfony": "^0.4.0",
+                "gember/event-sourcing": "^0.5",
+                "gember/file-finder-symfony": "^0.5",
+                "gember/file-reflector-roave": "^0.5",
+                "gember/identity-generator-symfony": "^0.5",
+                "gember/message-bus-symfony": "^0.5",
+                "gember/rdbms-event-store-doctrine-dbal": "^0.5",
+                "gember/serializer-symfony": "^0.5",
                 "php": "^8.3",
                 "symfony/config": "^7.1|^7.2",
                 "symfony/console": "^7.1|^7.2",
@@ -1317,26 +1317,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.5.0"
             },
-            "time": "2025-08-27T17:51:10+00:00"
+            "time": "2025-08-29T14:35:24+00:00"
         },
         {
             "name": "gember/file-finder-symfony",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/file-finder-symfony.git",
-                "reference": "0f0151a9f6320014f4437371150d395f7b321992"
+                "reference": "c3d19403cbdad0fded8466a9ba358ad8b98681d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/file-finder-symfony/zipball/0f0151a9f6320014f4437371150d395f7b321992",
-                "reference": "0f0151a9f6320014f4437371150d395f7b321992",
+                "url": "https://api.github.com/repos/GemberPHP/file-finder-symfony/zipball/c3d19403cbdad0fded8466a9ba358ad8b98681d7",
+                "reference": "c3d19403cbdad0fded8466a9ba358ad8b98681d7",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.4",
+                "gember/event-sourcing": "^0.5",
                 "php": "^8.3",
                 "symfony/finder": "^7.1"
             },
@@ -1381,26 +1381,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/file-finder-symfony/issues",
-                "source": "https://github.com/GemberPHP/file-finder-symfony/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/file-finder-symfony/tree/0.5.0"
             },
-            "time": "2025-08-27T17:24:06+00:00"
+            "time": "2025-08-29T14:30:35+00:00"
         },
         {
             "name": "gember/file-reflector-roave",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/file-reflector-roave.git",
-                "reference": "693051bf17f0c94dd4b1424ae68375293e10f988"
+                "reference": "050bf781ffe7d0022611218991e2d2365dc945e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/file-reflector-roave/zipball/693051bf17f0c94dd4b1424ae68375293e10f988",
-                "reference": "693051bf17f0c94dd4b1424ae68375293e10f988",
+                "url": "https://api.github.com/repos/GemberPHP/file-reflector-roave/zipball/050bf781ffe7d0022611218991e2d2365dc945e8",
+                "reference": "050bf781ffe7d0022611218991e2d2365dc945e8",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.4.0",
+                "gember/event-sourcing": "^0.5",
                 "php": "^8.3",
                 "roave/better-reflection": "^6.41"
             },
@@ -1445,26 +1445,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/file-reflector-roave/issues",
-                "source": "https://github.com/GemberPHP/file-reflector-roave/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/file-reflector-roave/tree/0.5.0"
             },
-            "time": "2025-08-27T17:21:09+00:00"
+            "time": "2025-08-29T14:30:36+00:00"
         },
         {
             "name": "gember/identity-generator-symfony",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/identity-generator-symfony.git",
-                "reference": "107ac9b6b293568baf99dd98b5ac1cd83631321c"
+                "reference": "15695ccbddcdcb4506d2821718eb8d8858540eb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/identity-generator-symfony/zipball/107ac9b6b293568baf99dd98b5ac1cd83631321c",
-                "reference": "107ac9b6b293568baf99dd98b5ac1cd83631321c",
+                "url": "https://api.github.com/repos/GemberPHP/identity-generator-symfony/zipball/15695ccbddcdcb4506d2821718eb8d8858540eb5",
+                "reference": "15695ccbddcdcb4506d2821718eb8d8858540eb5",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.4.0",
+                "gember/event-sourcing": "^0.5",
                 "php": "^8.3",
                 "symfony/uid": "^7.1"
             },
@@ -1509,26 +1509,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/identity-generator-symfony/issues",
-                "source": "https://github.com/GemberPHP/identity-generator-symfony/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/identity-generator-symfony/tree/0.5.0"
             },
-            "time": "2025-08-27T17:26:32+00:00"
+            "time": "2025-08-29T14:30:29+00:00"
         },
         {
             "name": "gember/message-bus-symfony",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/message-bus-symfony.git",
-                "reference": "d8092a391ad3b584e7a07e793f3c0f9b558d21ce"
+                "reference": "05476e1653f431f2b5e55620ff9ff575e1cfb228"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/message-bus-symfony/zipball/d8092a391ad3b584e7a07e793f3c0f9b558d21ce",
-                "reference": "d8092a391ad3b584e7a07e793f3c0f9b558d21ce",
+                "url": "https://api.github.com/repos/GemberPHP/message-bus-symfony/zipball/05476e1653f431f2b5e55620ff9ff575e1cfb228",
+                "reference": "05476e1653f431f2b5e55620ff9ff575e1cfb228",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.4.0",
+                "gember/event-sourcing": "^0.5",
                 "php": "^8.3",
                 "symfony/messenger": "^7.1"
             },
@@ -1573,27 +1573,27 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/message-bus-symfony/issues",
-                "source": "https://github.com/GemberPHP/message-bus-symfony/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/message-bus-symfony/tree/0.5.0"
             },
-            "time": "2025-08-27T17:29:13+00:00"
+            "time": "2025-08-29T14:30:37+00:00"
         },
         {
             "name": "gember/rdbms-event-store-doctrine-dbal",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal.git",
-                "reference": "7b77ea18399545303500ff09b035c6591863affe"
+                "reference": "4e581cbf48a1e062fd6bfe0a8973723799012cc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/7b77ea18399545303500ff09b035c6591863affe",
-                "reference": "7b77ea18399545303500ff09b035c6591863affe",
+                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/4e581cbf48a1e062fd6bfe0a8973723799012cc1",
+                "reference": "4e581cbf48a1e062fd6bfe0a8973723799012cc1",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^4.0",
-                "gember/event-sourcing": "^0.4.0",
+                "gember/event-sourcing": "^0.5",
                 "php": "^8.3"
             },
             "require-dev": {
@@ -1637,26 +1637,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/issues",
-                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.5.0"
             },
-            "time": "2025-08-27T17:40:00+00:00"
+            "time": "2025-08-29T14:30:38+00:00"
         },
         {
             "name": "gember/serializer-symfony",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/serializer-symfony.git",
-                "reference": "a1fe41c4d00397fd48ba329dbccfe9dd2f00bc82"
+                "reference": "5766d276d0fad826f6eba2417f51a8adcec65dd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/serializer-symfony/zipball/a1fe41c4d00397fd48ba329dbccfe9dd2f00bc82",
-                "reference": "a1fe41c4d00397fd48ba329dbccfe9dd2f00bc82",
+                "url": "https://api.github.com/repos/GemberPHP/serializer-symfony/zipball/5766d276d0fad826f6eba2417f51a8adcec65dd0",
+                "reference": "5766d276d0fad826f6eba2417f51a8adcec65dd0",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.4.0",
+                "gember/event-sourcing": "^0.5",
                 "php": "^8.3",
                 "symfony/serializer": "^7.1"
             },
@@ -1700,9 +1700,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/serializer-symfony/issues",
-                "source": "https://github.com/GemberPHP/serializer-symfony/tree/0.4.0"
+                "source": "https://github.com/GemberPHP/serializer-symfony/tree/0.5.0"
             },
-            "time": "2025-08-27T17:17:41+00:00"
+            "time": "2025-08-29T14:30:35+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
