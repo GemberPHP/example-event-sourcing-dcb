@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command;
 
 use Faker\Factory;
-use Gember\EventSourcing\Util\Generator\Identity\IdentityGenerator;
+use Gember\DependencyContracts\Util\Generator\Identity\IdentityGenerator;
 use Gember\ExampleEventSourcingDcb\Domain\ChangeCourseCapacity\ChangeCourseCapacityCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Course\CreateCourseCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Course\RenameCourseCommand;

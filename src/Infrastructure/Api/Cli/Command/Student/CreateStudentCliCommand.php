@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command\Student;
 
-use Gember\EventSourcing\Util\Generator\Identity\IdentityGenerator;
+use Gember\DependencyContracts\Util\Generator\Identity\IdentityGenerator;
 use Gember\ExampleEventSourcingDcb\Application\Command\Student\CreateStudentCommand;
 use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
