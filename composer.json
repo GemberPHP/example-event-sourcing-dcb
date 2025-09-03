@@ -37,7 +37,7 @@
         "symfony/http-kernel": "7.1.*",
         "symfony/messenger": "7.1.*",
         "symfony/runtime": "7.1.*",
-        "symfony/yaml": "7.1.*"
+        "symfony/yaml": "7.3.*"
     },
     "require-dev": {
         "captainhook/captainhook": "^5.23",
