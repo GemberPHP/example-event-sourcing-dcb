@@ -31,7 +31,7 @@
         "gember/event-sourcing": "^0.8",
         "gember/event-sourcing-symfony-bundle": "^0.8",
         "symfony/console": "7.1.*",
-        "symfony/dotenv": "7.1.*",
+        "symfony/dotenv": "7.3.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.1.*",
         "symfony/http-kernel": "7.1.*",
