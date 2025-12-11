@@ -30,7 +30,7 @@
         "gember/dependency-contracts": "^0.1",
         "gember/event-sourcing": "^0.9",
         "gember/event-sourcing-symfony-bundle": "^0.9",
-        "symfony/console": "7.1.*",
+        "symfony/console": "7.3.*",
         "symfony/dotenv": "7.3.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.1.*",
