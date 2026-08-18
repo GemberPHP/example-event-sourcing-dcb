@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Rector\CodeQuality\Rector\FuncCall\RemoveSoleValueSprintfRector;
 use Rector\CodeQuality\Rector\FuncCall\UnwrapSprintfOneArgumentRector;
 use Rector\CodeQuality\Rector\FunctionLike\SimplifyUselessVariableRector;
-use Rector\CodingStyle\Rector\FuncCall\CountArrayToEmptyArrayComparisonRector;
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\Array_\RemoveDuplicatedArrayKeyRector;
 use Rector\DeadCode\Rector\Cast\RecastingRemovalRector;
@@ -24,7 +23,7 @@ use Rector\Php80\Rector\FuncCall\ClassOnObjectRector;
 use Rector\Php80\Rector\Identical\StrEndsWithRector;
 use Rector\Php80\Rector\Identical\StrStartsWithRector;
 use Rector\Php80\Rector\NotIdentical\StrContainsRector;
-use Rector\Php81\Rector\Array_\FirstClassCallableRector;
+use Rector\Php81\Rector\Array_\ArrayToFirstClassCallableRector;
 use Rector\Php81\Rector\Property\ReadOnlyPropertyRector;
 use Rector\Php82\Rector\Class_\ReadOnlyClassRector;
 use Rector\Php83\Rector\ClassConst\AddTypeToConstRector;
@@ -44,7 +43,6 @@ $config = RectorConfig::configure()
         PrivatizeFinalClassMethodRector::class,
         UnwrapSprintfOneArgumentRector::class,
         RemoveSoleValueSprintfRector::class,
-        CountArrayToEmptyArrayComparisonRector::class,
         // See withConfiguredRule below for more
 
         // Misc - Deadcode
@@ -70,7 +68,7 @@ $config = RectorConfig::configure()
 
         // PHP 8.1
         ReadOnlyPropertyRector::class,
-        FirstClassCallableRector::class,
+        ArrayToFirstClassCallableRector::class,
 
         // PHP 8.2
         ReadOnlyClassRector::class,
