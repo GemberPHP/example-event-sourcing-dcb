@@ -19,25 +19,25 @@
         }
     ],
     "require": {
-        "php": "^8.3",
+        "php": "^8.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/dbal": "^4",
-        "doctrine/doctrine-bundle": "^2.13",
-        "doctrine/doctrine-migrations-bundle": "^3.3",
-        "doctrine/orm": "^3.2",
+        "doctrine/doctrine-bundle": "^3.3",
+        "doctrine/doctrine-migrations-bundle": "^4.0",
+        "doctrine/orm": "^3.6",
         "fakerphp/faker": "^1.23",
-        "gember/dependency-contracts": "^0.1",
-        "gember/event-sourcing": "^0.9",
-        "gember/event-sourcing-symfony-bundle": "^0.9",
-        "symfony/console": "7.1.*",
-        "symfony/dotenv": "7.3.*",
+        "gember/dependency-contracts": "^0.4",
+        "gember/event-sourcing": "^0.14",
+        "gember/event-sourcing-symfony-bundle": "^0.15",
+        "symfony/console": "^8.1",
+        "symfony/dotenv": "^8.1",
         "symfony/flex": "^2",
-        "symfony/framework-bundle": "7.1.*",
-        "symfony/http-kernel": "7.3.*",
-        "symfony/messenger": "7.1.*",
-        "symfony/runtime": "7.3.*",
-        "symfony/yaml": "7.3.*"
+        "symfony/framework-bundle": "^8.1",
+        "symfony/http-kernel": "^8.1",
+        "symfony/messenger": "^8.1",
+        "symfony/runtime": "^8.1",
+        "symfony/yaml": "^8.1"
     },
     "require-dev": {
         "captainhook/captainhook": "^5.23",
@@ -77,7 +77,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.1.*"
+            "require": "8.1.*"
         }
     },
     "scripts": {
