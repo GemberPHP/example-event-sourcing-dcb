@@ -146,12 +146,6 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoRunCommand.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#1 \\$min \\(0\\) of function random_int expects lower number than parameter \\#2 \\$max \\(int\\<\\-1, max\\>\\)\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoRunCommand.php',
-];
-$ignoreErrors[] = [
 	'message' => '#^Binary operation "\\." between \'Student \\# \' and mixed results in an error\\.$#',
 	'identifier' => 'binaryOp.invalid',
 	'count' => 1,
