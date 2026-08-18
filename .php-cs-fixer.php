@@ -3,7 +3,8 @@
 declare(strict_types=1);
 
 $finder = (new PhpCsFixer\Finder())
-    ->in(['src', 'bin', 'config', 'public', 'migrations']);
+    ->in(['src', 'bin', 'config', 'public', 'migrations'])
+    ->notName('reference.php');
 
 return (new PhpCsFixer\Config())
     ->setCacheFile('var/.php-cs-fixer.cache')

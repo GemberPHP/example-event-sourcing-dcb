@@ -14,6 +14,7 @@ $config->addPathToScan(__DIR__ . '/public', isDev: false);
 $config->ignoreErrorsOnPackage('doctrine/doctrine-bundle', [ErrorType::PROD_DEPENDENCY_ONLY_IN_DEV]);
 $config->ignoreErrorsOnPackage('doctrine/doctrine-migrations-bundle', [ErrorType::PROD_DEPENDENCY_ONLY_IN_DEV]);
 $config->ignoreErrorsOnPackage('gember/event-sourcing-symfony-bundle', [ErrorType::PROD_DEPENDENCY_ONLY_IN_DEV]);
+$config->ignoreErrorsOnPackage('symfony/monolog-bundle', [ErrorType::PROD_DEPENDENCY_ONLY_IN_DEV]);
 
 $config->ignoreErrorsOnPackage('doctrine/dbal', [ErrorType::UNUSED_DEPENDENCY]);
 $config->ignoreErrorsOnPackage('doctrine/orm', [ErrorType::UNUSED_DEPENDENCY]);
