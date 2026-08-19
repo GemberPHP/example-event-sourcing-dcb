@@ -34,3 +34,7 @@ Or run the demo command to run random sets of commands automatically:
 ```
 bin/console gember:demo
 ```
+Or run even 100 demo processes concurrently:
+```
+seq 1 100 | xargs -P100 -I{} php bin/console gember:demo
+```
