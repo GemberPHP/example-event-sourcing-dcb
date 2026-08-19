@@ -12,6 +12,8 @@ use Gember\EventSourcing\UseCase\EventSourcedUseCaseBehaviorTrait;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseCreatedEvent;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
 use Gember\ExampleEventSourcingDcb\Domain\Course\CourseNotFoundException;
+use Gember\ExampleEventSourcingDcb\Domain\SubscribeStudentToCourse\StudentSubscribedToCourseEvent;
+use Gember\ExampleEventSourcingDcb\Domain\UnsubscribeStudentFromCourse\StudentUnsubscribedFromCourseEvent;
 
 /**
  * Use case based one domain tag.
@@ -30,8 +32,10 @@ final class ChangeCourseCapacity implements EventSourcedUseCase
      * Use private properties to guard idempotency and protect invariants.
      */
     private int $capacity;
+    private int $totalSubscriptions;
 
     /**
+     * @throws CourseCapacityBelowSubscriptionsException
      * @throws CourseNotFoundException
      */
     #[DomainCommandHandler]
@@ -48,6 +52,7 @@ final class ChangeCourseCapacity implements EventSourcedUseCase
          * Protect invariants (business rules).
          */
         $this->assertCourseExists();
+        $this->assertCapacityNotBelowSubscriptions($command->capacity);
 
         /*
          * Apply events when all business rules are met.
@@ -65,6 +70,16 @@ final class ChangeCourseCapacity implements EventSourcedUseCase
         }
     }
 
+    /**
+     * @throws CourseCapacityBelowSubscriptionsException
+     */
+    private function assertCapacityNotBelowSubscriptions(int $newCapacity): void
+    {
+        if ($newCapacity < $this->totalSubscriptions) {
+            throw CourseCapacityBelowSubscriptionsException::create();
+        }
+    }
+
     /*
      * Change internal state by subscribing to relevant domain events for any of the domain tags,
      * so that this use case can apply its business rules.
@@ -74,11 +89,24 @@ final class ChangeCourseCapacity implements EventSourcedUseCase
     {
         $this->courseId = new CourseId($event->courseId);
         $this->capacity = $event->capacity;
+        $this->totalSubscriptions = 0;
     }
 
     #[DomainEventSubscriber]
     private function onCourseCapacityChangedEvent(CourseCapacityChangedEvent $event): void
     {
         $this->capacity = $event->capacity;
+    }
+
+    #[DomainEventSubscriber]
+    private function onStudentSubscribedToCourseEvent(StudentSubscribedToCourseEvent $event): void
+    {
+        ++$this->totalSubscriptions;
+    }
+
+    #[DomainEventSubscriber]
+    private function onStudentUnsubscribedFromCourseEvent(StudentUnsubscribedFromCourseEvent $event): void
+    {
+        --$this->totalSubscriptions;
     }
 }

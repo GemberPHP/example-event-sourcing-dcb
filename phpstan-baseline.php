@@ -14,6 +14,18 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Domain/ChangeCourseCapacity/ChangeCourseCapacity.php',
 ];
 $ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\ChangeCourseCapacity\\\\ChangeCourseCapacity\\:\\:onStudentSubscribedToCourseEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/ChangeCourseCapacity/ChangeCourseCapacity.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\ChangeCourseCapacity\\\\ChangeCourseCapacity\\:\\:onStudentUnsubscribedFromCourseEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/ChangeCourseCapacity/ChangeCourseCapacity.php',
+];
+$ignoreErrors[] = [
 	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\Course\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
