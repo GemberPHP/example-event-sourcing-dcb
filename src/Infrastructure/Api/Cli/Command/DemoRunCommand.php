@@ -29,7 +29,6 @@ use Throwable;
 )]
 final class DemoRunCommand extends Command
 {
-    private const array ACTIONS_BASE = ['createCourse', 'createStudent'];
     private const array ACTIONS_COURSES = ['renameCourse', 'changeCourseCapacity'];
     private const array ACTIONS_SUBSCRIPTIONS = ['subscribeStudentToCourse', 'unsubscribeStudentFromCourse'];
 
@@ -61,8 +60,9 @@ final class DemoRunCommand extends Command
     #[Override]
     protected function configure(): void
     {
-        $this->addOption('iterationsCreation', 'ic', InputOption::VALUE_REQUIRED, 'Number of iterations for creations', 20);
-        $this->addOption('iterationsSubscription', 'is', InputOption::VALUE_REQUIRED, 'Number of iterations for subscriptions', 100);
+        $this->addOption('iterationsCourseCreation', 'icc', InputOption::VALUE_REQUIRED, 'Number of iterations for creations', 10);
+        $this->addOption('iterationsStudentCreation', 'isc', InputOption::VALUE_REQUIRED, 'Number of iterations for creations', 50);
+        $this->addOption('iterationsSubscription', 'is', InputOption::VALUE_REQUIRED, 'Number of iterations for subscriptions', 500);
         $this->addOption('sleep', 's', InputOption::VALUE_REQUIRED, 'Slow down demo iterations in seconds', 0);
     }
 
@@ -70,12 +70,29 @@ final class DemoRunCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $sleep = (int) $input->getOption('sleep');
+
+        $iterationsCourseCreation = (int) $input->getOption('iterationsCourseCreation');
+        $iterationsStudentCreation = (int) $input->getOption('iterationsStudentCreation');
         $iterationsSubscription = (int) $input->getOption('iterationsSubscription');
-        $iterationsCreation = (int) $input->getOption('iterationsCreation');
 
-        for ($i = 1; $i <= $iterationsCreation; ++$i) {
-            $action = $this->pickAction(self::ACTIONS_BASE);
+        for ($i = 1; $i <= $iterationsCourseCreation; ++$i) {
+            $action = 'createCourse';
+            $output->writeln(sprintf('%d. %s', $i, $action));
 
+            try {
+                $this->{$action}();
+            } catch (Throwable $exception) {
+                $output->writeln(sprintf('<error>%s</error>', $exception->getPrevious()?->getMessage()));
+            }
+
+            // Slow down demo
+            if ($sleep > 0) {
+                sleep($sleep);
+            }
+        }
+
+        for ($i = 1; $i <= $iterationsStudentCreation; ++$i) {
+            $action = 'createStudent';
             $output->writeln(sprintf('%d. %s', $i, $action));
 
             try {

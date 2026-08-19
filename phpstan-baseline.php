@@ -26,6 +26,30 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Domain/Course/Course.php',
 ];
 $ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\RemoveStudentFromWaitlist\\\\RemoveStudentFromWaitlist\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/RemoveStudentFromWaitlist/RemoveStudentFromWaitlist.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\RemoveStudentFromWaitlist\\\\RemoveStudentFromWaitlist\\:\\:onStudentCreatedEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/RemoveStudentFromWaitlist/RemoveStudentFromWaitlist.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\RemoveStudentFromWaitlist\\\\RemoveStudentFromWaitlist\\:\\:onStudentRemovedFromWaitlistEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/RemoveStudentFromWaitlist/RemoveStudentFromWaitlist.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\RemoveStudentFromWaitlist\\\\RemoveStudentFromWaitlist\\:\\:onStudentWaitlistedForCourseEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/RemoveStudentFromWaitlist/RemoveStudentFromWaitlist.php',
+];
+$ignoreErrors[] = [
 	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Student\\\\Student\\:\\:onStudentCreatedEvent\\(\\) is unused\\.$#',
 	'identifier' => 'method.unused',
 	'count' => 1,
@@ -92,6 +116,42 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Domain/UnsubscribeStudentFromCourse/UnsubscribeStudentFromCourse.php',
 ];
 $ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\WaitlistStudentForCourse\\\\WaitlistStudentForCourse\\:\\:onCourseCreatedEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/WaitlistStudentForCourse/WaitlistStudentForCourse.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\WaitlistStudentForCourse\\\\WaitlistStudentForCourse\\:\\:onStudentCreatedEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/WaitlistStudentForCourse/WaitlistStudentForCourse.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\WaitlistStudentForCourse\\\\WaitlistStudentForCourse\\:\\:onStudentRemovedFromWaitlistEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/WaitlistStudentForCourse/WaitlistStudentForCourse.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\WaitlistStudentForCourse\\\\WaitlistStudentForCourse\\:\\:onStudentSubscribedToCourseEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/WaitlistStudentForCourse/WaitlistStudentForCourse.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\WaitlistStudentForCourse\\\\WaitlistStudentForCourse\\:\\:onStudentUnsubscribedFromCourseEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/WaitlistStudentForCourse/WaitlistStudentForCourse.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Method Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\WaitlistStudentForCourse\\\\WaitlistStudentForCourse\\:\\:onStudentWaitlistedForCourseEvent\\(\\) is unused\\.$#',
+	'identifier' => 'method.unused',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Domain/WaitlistStudentForCourse/WaitlistStudentForCourse.php',
+];
+$ignoreErrors[] = [
 	'message' => '#^Binary operation "\\." between \'Course capacity…\' and mixed results in an error\\.$#',
 	'identifier' => 'binaryOp.invalid',
 	'count' => 1,
@@ -140,9 +200,57 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/Course/RenameCourseCliCommand.php',
 ];
 $ignoreErrors[] = [
+	'message' => '#^Binary operation "\\." between \'Student \\#\' and mixed results in an error\\.$#',
+	'identifier' => 'binaryOp.invalid',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/RemoveStudentFromWaitlistCliCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Binary operation "\\." between non\\-falsy\\-string and mixed results in an error\\.$#',
+	'identifier' => 'binaryOp.invalid',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/RemoveStudentFromWaitlistCliCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\CourseId constructor expects string, mixed given\\.$#',
+	'identifier' => 'argument.type',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/RemoveStudentFromWaitlistCliCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Student\\\\StudentId constructor expects string, mixed given\\.$#',
+	'identifier' => 'argument.type',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/RemoveStudentFromWaitlistCliCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Binary operation "\\." between \'Student \\#\' and mixed results in an error\\.$#',
+	'identifier' => 'binaryOp.invalid',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/WaitlistStudentForCourseCliCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Binary operation "\\." between non\\-falsy\\-string and mixed results in an error\\.$#',
+	'identifier' => 'binaryOp.invalid',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/WaitlistStudentForCourseCliCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Course\\\\CourseId constructor expects string, mixed given\\.$#',
+	'identifier' => 'argument.type',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/WaitlistStudentForCourseCliCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Parameter \\#1 \\$id of class Gember\\\\ExampleEventSourcingDcb\\\\Domain\\\\Student\\\\StudentId constructor expects string, mixed given\\.$#',
+	'identifier' => 'argument.type',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/CourseWaitlist/WaitlistStudentForCourseCliCommand.php',
+];
+$ignoreErrors[] = [
 	'message' => '#^Cannot cast mixed to int\\.$#',
 	'identifier' => 'cast.int',
-	'count' => 3,
+	'count' => 4,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoRunCommand.php',
 ];
 $ignoreErrors[] = [

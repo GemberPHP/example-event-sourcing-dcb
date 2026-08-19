@@ -12,6 +12,9 @@ gember_event_sourcing:
     command_handler:
       reflector:
         path: '%kernel.project_dir%/src/Domain'
+    saga:
+      reflector:
+        path: '%kernel.project_dir%/src/Domain'
   message_bus:
     symfony:
       event_bus: '@event.bus'

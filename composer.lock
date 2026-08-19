@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5db8e2e1354a4fa7a489b13a794b2b1a",
+    "content-hash": "6c1d557ec8303e707053a1c9849b81a4",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -1245,16 +1245,16 @@
         },
         {
             "name": "gember/event-sourcing",
-            "version": "0.14.0",
+            "version": "0.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing.git",
-                "reference": "2959607adac96d1140b01260b42ea89c16006b05"
+                "reference": "123ffa49390bd13e1799ea2884751c344e69f269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/2959607adac96d1140b01260b42ea89c16006b05",
-                "reference": "2959607adac96d1140b01260b42ea89c16006b05",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/123ffa49390bd13e1799ea2884751c344e69f269",
+                "reference": "123ffa49390bd13e1799ea2884751c344e69f269",
                 "shasum": ""
             },
             "require": {
@@ -1304,26 +1304,26 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.14.0"
+                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.15.0"
             },
-            "time": "2026-08-17T18:57:44+00:00"
+            "time": "2026-08-19T19:48:59+00:00"
         },
         {
             "name": "gember/event-sourcing-symfony-bundle",
-            "version": "0.15.1",
+            "version": "0.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing-symfony-bundle.git",
-                "reference": "c2ecddaeffeb5ede12172eb8b2565cefa63345f2"
+                "reference": "a37cd7958780d9420da5dbdf726f5885eb2d6ba4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/c2ecddaeffeb5ede12172eb8b2565cefa63345f2",
-                "reference": "c2ecddaeffeb5ede12172eb8b2565cefa63345f2",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/a37cd7958780d9420da5dbdf726f5885eb2d6ba4",
+                "reference": "a37cd7958780d9420da5dbdf726f5885eb2d6ba4",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.14",
+                "gember/event-sourcing": "^0.15",
                 "gember/identity-generator-symfony": "^0.12",
                 "gember/message-bus-symfony": "^0.12",
                 "gember/rdbms-event-store-doctrine-dbal": "^0.13",
@@ -1373,9 +1373,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.15.1"
+                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.16.0"
             },
-            "time": "2026-08-18T18:08:09+00:00"
+            "time": "2026-08-19T19:54:12+00:00"
         },
         {
             "name": "gember/identity-generator-symfony",
@@ -6106,16 +6106,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.95.19",
+            "version": "v3.95.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "8a06c4ad6bd580b7920bd5ff81b271ca1158507e"
+                "reference": "4d6c9886a77dbc1db3b9eaca6472cedf9eb1fab7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/8a06c4ad6bd580b7920bd5ff81b271ca1158507e",
-                "reference": "8a06c4ad6bd580b7920bd5ff81b271ca1158507e",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/4d6c9886a77dbc1db3b9eaca6472cedf9eb1fab7",
+                "reference": "4d6c9886a77dbc1db3b9eaca6472cedf9eb1fab7",
                 "shasum": ""
             },
             "require": {
@@ -6151,7 +6151,6 @@
                 "infection/infection": "^0.32.7",
                 "justinrainbow/json-schema": "^6.10.0",
                 "keradus/cli-executor": "^2.3",
-                "mikey179/vfsstream": "^1.6.12",
                 "php-coveralls/php-coveralls": "^2.9.1",
                 "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.8",
                 "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.8",
@@ -6199,7 +6198,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.95.19"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.95.20"
             },
             "funding": [
                 {
@@ -6207,7 +6206,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-17T16:24:07+00:00"
+            "time": "2026-08-19T16:28:14+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -6801,16 +6800,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "2.6.2",
+            "version": "2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "03cd615cdd5648abb5f10ff3a684fdb976687190"
+                "reference": "7e46709996a4b3dc59e1d6ecbb6a38ace335bd58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/03cd615cdd5648abb5f10ff3a684fdb976687190",
-                "reference": "03cd615cdd5648abb5f10ff3a684fdb976687190",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/7e46709996a4b3dc59e1d6ecbb6a38ace335bd58",
+                "reference": "7e46709996a4b3dc59e1d6ecbb6a38ace335bd58",
                 "shasum": ""
             },
             "require": {
@@ -6849,7 +6848,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/2.6.2"
+                "source": "https://github.com/rectorphp/rector/tree/2.6.3"
             },
             "funding": [
                 {
@@ -6857,7 +6856,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-12T06:23:05+00:00"
+            "time": "2026-08-18T22:01:18+00:00"
         },
         {
             "name": "sebastian/diff",

@@ -42,7 +42,6 @@ final class SubscribeStudentToCourse implements EventSourcedUseCase
     private int $totalCountSubscriptionsForStudent;
 
     /**
-     * @throws CourseCannotAcceptMoreStudentsException
      * @throws CourseNotFoundException
      * @throws StudentCannotSubscribeToMoreCoursesException
      * @throws StudentNotFoundException
@@ -62,8 +61,16 @@ final class SubscribeStudentToCourse implements EventSourcedUseCase
          */
         $this->assertCourseExists();
         $this->assertStudentExists();
-        $this->assertCourseHasSpotsAvailable();
         $this->assertStudentCanSubscribeToMoreCourses();
+
+        /*
+         * Decline subscription when course is full.
+         */
+        if ($this->totalCountSubscriptionsForCourse >= $this->courseCapacity) {
+            $this->apply(new StudentSubscriptionToCourseDeclinedEvent((string) $this->courseId, (string) $this->studentId));
+
+            return;
+        }
 
         /*
          * Apply events when all business rules are met.
@@ -92,16 +99,6 @@ final class SubscribeStudentToCourse implements EventSourcedUseCase
     {
         if (!isset($this->studentId)) {
             throw StudentNotFoundException::create();
-        }
-    }
-
-    /**
-     * @throws CourseCannotAcceptMoreStudentsException
-     */
-    private function assertCourseHasSpotsAvailable(): void
-    {
-        if ($this->totalCountSubscriptionsForCourse >= $this->courseCapacity) {
-            throw CourseCannotAcceptMoreStudentsException::create();
         }
     }
 
