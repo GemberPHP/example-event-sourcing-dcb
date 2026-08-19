@@ -142,7 +142,7 @@ $ignoreErrors[] = [
 $ignoreErrors[] = [
 	'message' => '#^Cannot cast mixed to int\\.$#',
 	'identifier' => 'cast.int',
-	'count' => 1,
+	'count' => 3,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoRunCommand.php',
 ];
 $ignoreErrors[] = [

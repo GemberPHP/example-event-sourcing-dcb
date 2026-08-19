@@ -6,14 +6,15 @@ namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command;
 
 use Faker\Factory;
 use Gember\DependencyContracts\Util\Generator\Identity\IdentityGenerator;
-use Gember\ExampleEventSourcingDcb\Domain\ChangeCourseCapacity\ChangeCourseCapacityCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Course\CreateCourseCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Course\RenameCourseCommand;
 use Gember\ExampleEventSourcingDcb\Application\Command\Student\CreateStudentCommand;
+use Gember\ExampleEventSourcingDcb\Domain\ChangeCourseCapacity\ChangeCourseCapacityCommand;
+use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
 use Gember\ExampleEventSourcingDcb\Domain\Student\StudentId;
 use Gember\ExampleEventSourcingDcb\Domain\SubscribeStudentToCourse\SubscribeStudentToCourseCommand;
 use Gember\ExampleEventSourcingDcb\Domain\UnsubscribeStudentFromCourse\UnsubscribeStudentFromCourseCommand;
-use Gember\ExampleEventSourcingDcb\Domain\Course\CourseId;
+use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -21,7 +22,6 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Throwable;
-use Override;
 
 #[AsCommand(
     name: 'gember:demo',
@@ -61,15 +61,20 @@ final class DemoRunCommand extends Command
     #[Override]
     protected function configure(): void
     {
-        $this->addOption('iterations', 'i', InputOption::VALUE_REQUIRED, 'Number of iterations', 20);
-        $this->addOption('sleep', 's', InputOption::VALUE_REQUIRED, 'Slow down demo iterations in seconds', 1);
+        $this->addOption('iterationsCreation', 'ic', InputOption::VALUE_REQUIRED, 'Number of iterations for creations', 20);
+        $this->addOption('iterationsSubscription', 'is', InputOption::VALUE_REQUIRED, 'Number of iterations for subscriptions', 100);
+        $this->addOption('sleep', 's', InputOption::VALUE_REQUIRED, 'Slow down demo iterations in seconds', 0);
     }
 
     #[Override]
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        for ($i = 1; $i <= $input->getOption('iterations'); ++$i) {
-            $action = $this->pickAction();
+        $sleep = (int) $input->getOption('sleep');
+        $iterationsSubscription = (int) $input->getOption('iterationsSubscription');
+        $iterationsCreation = (int) $input->getOption('iterationsCreation');
+
+        for ($i = 1; $i <= $iterationsCreation; ++$i) {
+            $action = $this->pickAction(self::ACTIONS_BASE);
 
             $output->writeln(sprintf('%d. %s', $i, $action));
 
@@ -80,23 +85,36 @@ final class DemoRunCommand extends Command
             }
 
             // Slow down demo
-            sleep((int) $input->getOption('sleep'));
+            if ($sleep > 0) {
+                sleep($sleep);
+            }
+        }
+
+        for ($i = 1; $i <= $iterationsSubscription; ++$i) {
+            $action = $this->pickAction([...self::ACTIONS_COURSES, ...self::ACTIONS_SUBSCRIPTIONS]);
+
+            $output->writeln(sprintf('%d. %s', $i, $action));
+
+            try {
+                $this->{$action}();
+            } catch (Throwable $exception) {
+                $output->writeln(sprintf('<error>%s</error>', $exception->getPrevious()?->getMessage()));
+            }
+
+            // Slow down demo
+            if ($sleep > 0) {
+                sleep($sleep);
+            }
         }
 
         return self::SUCCESS;
     }
 
-    private function pickAction(): string
+    /**
+     * @param list<string> $actions
+     */
+    private function pickAction(array $actions): string
     {
-        /** @var list<string> $actions */
-        $actions = [
-            ...self::ACTIONS_BASE,
-            ...self::ACTIONS_BASE,
-            ...self::ACTIONS_COURSES,
-            ...self::ACTIONS_SUBSCRIPTIONS,
-            ...self::ACTIONS_SUBSCRIPTIONS,
-        ];
-
         return $actions[random_int(0, count($actions) - 1)];
     }
 
