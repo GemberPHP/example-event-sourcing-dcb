@@ -30,11 +30,11 @@ You're all set, see what commands you can run:
 bin/console gember
 ```
 
-Or run the demo command to run random sets of commands automatically:
+Or run the demo command to run random sets of commands concurrently:
 ```
-bin/console gember:demo
-```
-Or run even 100 demo processes concurrently:
-```
-seq 1 100 | xargs -P100 -I{} php bin/console gember:demo
+# 1. Create shared fixtures (run once)
+php bin/console gember:demo:setup --courses=10 --students=50
+
+# 2. Hammer them concurrently
+seq 1 100 | xargs -P100 -I{} php bin/console gember:demo:stress --iterations=500
 ```

@@ -262,8 +262,20 @@ $ignoreErrors[] = [
 $ignoreErrors[] = [
 	'message' => '#^Cannot cast mixed to int\\.$#',
 	'identifier' => 'cast.int',
-	'count' => 4,
-	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoRunCommand.php',
+	'count' => 2,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoSetupCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Cannot cast mixed to int\\.$#',
+	'identifier' => 'cast.int',
+	'count' => 2,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoStressCommand.php',
+];
+$ignoreErrors[] = [
+	'message' => '#^Parameter \\#1 \\$json of function json_decode expects string, string\\|false given\\.$#',
+	'identifier' => 'argument.type',
+	'count' => 1,
+	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoStressCommand.php',
 ];
 $ignoreErrors[] = [
 	'message' => '#^Binary operation "\\." between \'Student \\# \' and mixed results in an error\\.$#',
