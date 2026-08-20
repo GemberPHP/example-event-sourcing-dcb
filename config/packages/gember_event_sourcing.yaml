@@ -29,3 +29,6 @@ gember_event_sourcing:
   serializer:
     symfony:
       serializer: '@serializer'
+  dispatch:
+    strategy: outbox
+    max_retries: 10

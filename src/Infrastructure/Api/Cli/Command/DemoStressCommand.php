@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Gember\ExampleEventSourcingDcb\Infrastructure\Api\Cli\Command;
 
+use Doctrine\DBAL\Connection;
 use Faker\Factory;
 use Gember\DependencyContracts\EventStore\Rdbms\OptimisticLockException;
 use Gember\ExampleEventSourcingDcb\Application\Command\Course\RenameCourseCommand;
@@ -48,6 +49,7 @@ final class DemoStressCommand extends Command
 
     public function __construct(
         private readonly MessageBusInterface $commandBus,
+        private readonly Connection $connection,
     ) {
         parent::__construct();
     }
@@ -120,6 +122,7 @@ final class DemoStressCommand extends Command
             } catch (Throwable $exception) {
                 if ($this->isRetryableException($exception) && $attempt < self::MAX_RETRIES) {
                     $this->output->writeln(sprintf(' <comment>⟳ Concurrency conflict, retrying (%d/%d)...</comment>', $attempt, self::MAX_RETRIES));
+                    $this->connection->close();
                     usleep(random_int(10_000, 100_000));
 
                     continue;
@@ -141,7 +144,9 @@ final class DemoStressCommand extends Command
                 return true;
             }
 
-            if (str_contains($current->getMessage(), 'Deadlock found')) {
+            if (str_contains($current->getMessage(), 'Deadlock found')
+                || str_contains($current->getMessage(), 'SAVEPOINT')
+            ) {
                 return true;
             }
 
