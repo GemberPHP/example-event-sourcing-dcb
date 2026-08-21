@@ -35,6 +35,9 @@ Or run the demo command to run random sets of commands concurrently:
 # 1. Create shared fixtures (run once)
 php bin/console gember:demo:setup --courses=10 --students=50
 
-# 2. Hammer them concurrently
-seq 1 100 | xargs -P100 -I{} php bin/console gember:demo:stress --iterations=500
+# 2. Start the outbox worker (in a separate terminal, polls every 100ms by default)
+php bin/console gember:outbox:process --watch
+
+# 3. Hammer them concurrently
+seq 1 10 | xargs -P10 -I{} php bin/console gember:demo:stress --iterations=50
 ```

@@ -33,7 +33,7 @@ final class DemoStressCommand extends Command
 
     private const array ACTIONS = ['renameCourse', 'changeCourseCapacity', 'subscribeStudentToCourse', 'unsubscribeStudentFromCourse'];
 
-    private const int MAX_RETRIES = 3;
+    private const int MAX_RETRIES = 10;
 
     /**
      * @var list<string>
