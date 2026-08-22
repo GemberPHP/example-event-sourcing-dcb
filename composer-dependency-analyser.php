@@ -21,6 +21,7 @@ $config->ignoreErrorsOnPackage('symfony/dotenv', [ErrorType::UNUSED_DEPENDENCY])
 $config->ignoreErrorsOnPackage('symfony/flex', [ErrorType::UNUSED_DEPENDENCY]);
 $config->ignoreErrorsOnPackage('symfony/runtime', [ErrorType::UNUSED_DEPENDENCY]);
 $config->ignoreErrorsOnPackage('symfony/yaml', [ErrorType::UNUSED_DEPENDENCY]);
+$config->ignoreErrorsOnPackage('gember/rdbms-event-store-doctrine-dbal', [ErrorType::UNUSED_DEPENDENCY]);
 
 $config->ignoreErrorsOnExtension('ext-ctype', [ErrorType::UNUSED_DEPENDENCY]);
 $config->ignoreErrorsOnExtension('ext-iconv', [ErrorType::UNUSED_DEPENDENCY]);

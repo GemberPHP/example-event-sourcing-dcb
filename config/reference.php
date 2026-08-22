@@ -968,6 +968,9 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     logging?: array{
  *         logger?: scalar|Param|null,
  *     },
+ *     snapshot?: array{
+ *         enabled?: bool|Param, // Default: false
+ *     },
  *     dispatch?: array{
  *         strategy?: "direct"|"outbox"|Param, // Default: "direct"
  *         max_retries?: int|Param, // Default: 5

@@ -7,6 +7,7 @@ namespace Gember\ExampleEventSourcingDcb\Domain\SubscribeStudentToCourse;
 use Gember\EventSourcing\UseCase\Attribute\DomainCommandHandler;
 use Gember\EventSourcing\UseCase\Attribute\DomainEventSubscriber;
 use Gember\EventSourcing\UseCase\Attribute\DomainTag;
+use Gember\EventSourcing\UseCase\Attribute\Snapshot;
 use Gember\EventSourcing\UseCase\EventSourcedUseCase;
 use Gember\EventSourcing\UseCase\EventSourcedUseCaseBehaviorTrait;
 use Gember\ExampleEventSourcingDcb\Domain\ChangeCourseCapacity\CourseCapacityChangedEvent;
@@ -21,6 +22,7 @@ use Gember\ExampleEventSourcingDcb\Domain\UnsubscribeStudentFromCourse\StudentUn
 /**
  * Use case based on multiple domain tags.
  */
+#[Snapshot(afterEvents: 10)]
 final class SubscribeStudentToCourse implements EventSourcedUseCase
 {
     use EventSourcedUseCaseBehaviorTrait;

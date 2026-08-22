@@ -20,5 +20,7 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+    # Enable serialization of private properties (needed for snapshotting use cases with private state)
+    Symfony\Component\Serializer\Normalizer\PropertyNormalizer:
+        tags:
+            - { name: serializer.normalizer, priority: -500 }

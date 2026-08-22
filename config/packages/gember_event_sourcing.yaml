@@ -1,6 +1,8 @@
 gember_event_sourcing:
   logging:
     logger: '@monolog.logger.gember'
+  snapshot:
+    enabled: true
   cache:
     enabled: true
     psr6:

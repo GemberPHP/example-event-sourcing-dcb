@@ -27,9 +27,10 @@
         "doctrine/doctrine-migrations-bundle": "^4.0",
         "doctrine/orm": "^3.6",
         "fakerphp/faker": "^1.23",
-        "gember/dependency-contracts": "^0.5",
-        "gember/event-sourcing": "^0.16",
-        "gember/event-sourcing-symfony-bundle": "^0.17",
+        "gember/dependency-contracts": "^0.6",
+        "gember/event-sourcing": "^0.17",
+        "gember/event-sourcing-symfony-bundle": "^0.18",
+        "gember/rdbms-event-store-doctrine-dbal": "^0.15",
         "symfony/console": "^8.1",
         "symfony/dotenv": "^8.1",
         "symfony/flex": "^2",
@@ -38,6 +39,7 @@
         "symfony/messenger": "^8.1",
         "symfony/monolog-bundle": "^4.0",
         "symfony/runtime": "^8.1",
+        "symfony/uid": "8.1.*",
         "symfony/yaml": "^8.1"
     },
     "require-dev": {
