@@ -22,7 +22,7 @@ use Gember\ExampleEventSourcingDcb\Domain\UnsubscribeStudentFromCourse\StudentUn
 /**
  * Use case based on multiple domain tags.
  */
-#[Snapshot(afterEvents: 10)]
+#[Snapshot(afterEvents: 3)]
 final class SubscribeStudentToCourse implements EventSourcedUseCase
 {
     use EventSourcedUseCaseBehaviorTrait;
