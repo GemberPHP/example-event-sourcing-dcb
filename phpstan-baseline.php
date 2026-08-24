@@ -268,25 +268,13 @@ $ignoreErrors[] = [
 $ignoreErrors[] = [
 	'message' => '#^Cannot cast mixed to int\\.$#',
 	'identifier' => 'cast.int',
-	'count' => 2,
+	'count' => 3,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoSnapshotCommand.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#1 \\$string of function substr expects string, mixed given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoSnapshotCommand.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Parameter \\#3 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, mixed given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoSnapshotCommand.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Parameter \\#4 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, mixed given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
+	'message' => '#^Cannot cast mixed to string\\.$#',
+	'identifier' => 'cast.string',
+	'count' => 3,
 	'path' => __DIR__ . '/src/Infrastructure/Api/Cli/Command/DemoSnapshotCommand.php',
 ];
 $ignoreErrors[] = [

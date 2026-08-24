@@ -199,17 +199,18 @@ final class DemoSnapshotCommand extends Command
     private function printSnapshotInfo(OutputInterface $output): void
     {
         $snapshots = $this->connection->fetchAllAssociative(
-            'SELECT boundary_hash, event_count, created_at, updated_at FROM snapshot_store',
+            'SELECT id, boundary_hash, event_count, created_at FROM snapshot_store ORDER BY boundary_hash, event_count DESC',
         );
 
         $output->writeln(sprintf('<comment>Snapshots in store: %d</comment>', count($snapshots)));
 
         foreach ($snapshots as $snapshot) {
             $output->writeln(sprintf(
-                '  hash: %s... | events: %d | updated: %s',
-                substr($snapshot['boundary_hash'], 0, 12),
-                $snapshot['event_count'],
-                $snapshot['updated_at'] ?? $snapshot['created_at'],
+                '  id: %s | hash: %s... | events: %d | created: %s',
+                (string) $snapshot['id'],
+                substr((string) $snapshot['boundary_hash'], 0, 12),
+                (int) $snapshot['event_count'],
+                (string) $snapshot['created_at'],
             ));
         }
     }
