@@ -45,6 +45,8 @@
     "require-dev": {
         "captainhook/captainhook": "^5.23",
         "friendsofphp/php-cs-fixer": "^3.58",
+        "gember/phpstan-gember": "^0.2.0",
+        "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
         "rector/rector": "^2.0",
         "shipmonk/composer-dependency-analyser": "^1.5"
@@ -72,6 +74,7 @@
     "config": {
         "allow-plugins": {
             "php-http/discovery": true,
+            "phpstan/extension-installer": true,
             "symfony/flex": true,
             "symfony/runtime": true
         },
