@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdb576efcaf9add33604bec6882f02b1",
+    "content-hash": "99656e392594bef979e4b370d24f76ee",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -1245,16 +1245,16 @@
         },
         {
             "name": "gember/event-sourcing",
-            "version": "0.19.0",
+            "version": "0.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing.git",
-                "reference": "fda5f242fb660f64d2b32959a6ee306a3a452677"
+                "reference": "2e3a1c50d7ad54b0a379d4b61edff86c2cb41de7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/fda5f242fb660f64d2b32959a6ee306a3a452677",
-                "reference": "fda5f242fb660f64d2b32959a6ee306a3a452677",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/2e3a1c50d7ad54b0a379d4b61edff86c2cb41de7",
+                "reference": "2e3a1c50d7ad54b0a379d4b61edff86c2cb41de7",
                 "shasum": ""
             },
             "require": {
@@ -1304,9 +1304,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.19.0"
+                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.19.1"
             },
-            "time": "2026-10-20T18:37:25+00:00"
+            "time": "2026-10-20T19:11:22+00:00"
         },
         {
             "name": "gember/event-sourcing-symfony-bundle",
@@ -1508,16 +1508,16 @@
         },
         {
             "name": "gember/rdbms-event-store-doctrine-dbal",
-            "version": "0.17.0",
+            "version": "0.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal.git",
-                "reference": "d9bf1b3b398f9fd7cf98f701d07e7950a947efa2"
+                "reference": "70b6b205c3161a12c0725d6dfe5b4c8e7dff88c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/d9bf1b3b398f9fd7cf98f701d07e7950a947efa2",
-                "reference": "d9bf1b3b398f9fd7cf98f701d07e7950a947efa2",
+                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/70b6b205c3161a12c0725d6dfe5b4c8e7dff88c4",
+                "reference": "70b6b205c3161a12c0725d6dfe5b4c8e7dff88c4",
                 "shasum": ""
             },
             "require": {
@@ -1566,9 +1566,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/issues",
-                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.17.0"
+                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.17.1"
             },
-            "time": "2026-10-20T18:37:20+00:00"
+            "time": "2026-10-20T19:23:37+00:00"
         },
         {
             "name": "gember/serializer-symfony",
