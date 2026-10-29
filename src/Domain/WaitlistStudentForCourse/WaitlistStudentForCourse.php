@@ -35,20 +35,21 @@ final class WaitlistStudentForCourse implements EventSourcedUseCase
     private bool $isStudentSubscribedToCourse;
 
     /**
+     * Idempotent: a student already on the waitlist, or already subscribed (e.g. subscribed in between the declined
+     * subscription and this command, dispatched asynchronously by the CourseWaitlistSaga), is not waitlisted again.
+     *
      * @throws CourseNotFoundException
      * @throws StudentNotFoundException
-     * @throws StudentAlreadySubscribedToCourseException
      */
     #[DomainCommandHandler]
     public function __invoke(WaitlistStudentForCourseCommand $command): void
     {
-        if ($this->isStudentOnWaitlist ?? false) {
+        if (($this->isStudentOnWaitlist ?? false) || ($this->isStudentSubscribedToCourse ?? false)) {
             return;
         }
 
         $this->assertCourseExists();
         $this->assertStudentExists();
-        $this->assertStudentIsNotAlreadySubscribed();
 
         $this->apply(new StudentWaitlistedForCourseEvent((string) $this->courseId, (string) $this->studentId));
     }
@@ -70,16 +71,6 @@ final class WaitlistStudentForCourse implements EventSourcedUseCase
     {
         if (!isset($this->studentId)) {
             throw StudentNotFoundException::create();
-        }
-    }
-
-    /**
-     * @throws StudentAlreadySubscribedToCourseException
-     */
-    private function assertStudentIsNotAlreadySubscribed(): void
-    {
-        if ($this->isStudentSubscribedToCourse ?? false) {
-            throw StudentAlreadySubscribedToCourseException::create();
         }
     }
 
