@@ -15,6 +15,7 @@ final class Version20260818120000 extends AbstractMigration
             <<<'SQL'
             CREATE TABLE `event_store_lock` (
               `boundary_hash` char(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+              `version` int NOT NULL DEFAULT 0,
               PRIMARY KEY (`boundary_hash`)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
             SQL
