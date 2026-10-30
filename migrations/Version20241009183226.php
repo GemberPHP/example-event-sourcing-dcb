@@ -29,7 +29,7 @@ final class Version20241009183226 extends AbstractMigration
             <<<'SQL'
             CREATE TABLE `event_store_relation` (
               `event_id` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-              `domain_tag` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+              `domain_tag` varchar(100) COLLATE utf8mb4_bin NOT NULL,
               PRIMARY KEY (`event_id`,`domain_tag`),
               KEY `domain_tag` (`domain_tag`),
               CONSTRAINT `event_store_relation_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `event_store` (`id`)
