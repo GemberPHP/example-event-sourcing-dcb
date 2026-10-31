@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e860f60dea76363cbf6a55845376f3c",
+    "content-hash": "2330128711b9c8bd3bb65baeabb8cdc1",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -1245,16 +1245,16 @@
         },
         {
             "name": "gember/event-sourcing",
-            "version": "0.20.0",
+            "version": "0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing.git",
-                "reference": "95d171b148ef79c135581b100e00a23250ec35c3"
+                "reference": "8b7f2d5246b46091b9f184e2c0fa42a5e494c57e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/95d171b148ef79c135581b100e00a23250ec35c3",
-                "reference": "95d171b148ef79c135581b100e00a23250ec35c3",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/8b7f2d5246b46091b9f184e2c0fa42a5e494c57e",
+                "reference": "8b7f2d5246b46091b9f184e2c0fa42a5e494c57e",
                 "shasum": ""
             },
             "require": {
@@ -1304,30 +1304,30 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.20.0"
+                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.21.0"
             },
-            "time": "2026-10-30T11:47:23+00:00"
+            "time": "2026-10-31T08:29:05+00:00"
         },
         {
             "name": "gember/event-sourcing-symfony-bundle",
-            "version": "0.22.1",
+            "version": "0.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing-symfony-bundle.git",
-                "reference": "0d28d5253f4822a6db567e55367fc5c9f31802a6"
+                "reference": "85d8eaaa31055d93f88a25abd8e3a84dac013656"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/0d28d5253f4822a6db567e55367fc5c9f31802a6",
-                "reference": "0d28d5253f4822a6db567e55367fc5c9f31802a6",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/85d8eaaa31055d93f88a25abd8e3a84dac013656",
+                "reference": "85d8eaaa31055d93f88a25abd8e3a84dac013656",
                 "shasum": ""
             },
             "require": {
                 "ext-pcntl": "*",
-                "gember/event-sourcing": "^0.20",
+                "gember/event-sourcing": "^0.21",
                 "gember/identity-generator-symfony": "^0.12",
                 "gember/message-bus-symfony": "^0.12",
-                "gember/rdbms-event-store-doctrine-dbal": "^0.19 || ^0.20",
+                "gember/rdbms-event-store-doctrine-dbal": "^0.21",
                 "gember/serializer-symfony": "^0.12",
                 "php": "^8.3",
                 "symfony/config": "^7.1|^7.2|^8.0",
@@ -1376,9 +1376,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.22.1"
+                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.23.0"
             },
-            "time": "2026-10-30T18:43:47+00:00"
+            "time": "2026-10-31T08:38:04+00:00"
         },
         {
             "name": "gember/identity-generator-symfony",
@@ -1510,16 +1510,16 @@
         },
         {
             "name": "gember/rdbms-event-store-doctrine-dbal",
-            "version": "0.20.0",
+            "version": "0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal.git",
-                "reference": "145ae668a9bacd2251f55bb74169a993d7596394"
+                "reference": "4f64e3ef6a5d96e2f59c799d377a91b7ab898f1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/145ae668a9bacd2251f55bb74169a993d7596394",
-                "reference": "145ae668a9bacd2251f55bb74169a993d7596394",
+                "url": "https://api.github.com/repos/GemberPHP/rdbms-event-store-doctrine-dbal/zipball/4f64e3ef6a5d96e2f59c799d377a91b7ab898f1d",
+                "reference": "4f64e3ef6a5d96e2f59c799d377a91b7ab898f1d",
                 "shasum": ""
             },
             "require": {
@@ -1568,9 +1568,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/issues",
-                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.20.0"
+                "source": "https://github.com/GemberPHP/rdbms-event-store-doctrine-dbal/tree/0.21.0"
             },
-            "time": "2026-10-30T18:40:18+00:00"
+            "time": "2026-10-31T08:28:55+00:00"
         },
         {
             "name": "gember/serializer-symfony",
@@ -6294,20 +6294,20 @@
         },
         {
             "name": "gember/phpstan-gember",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/phpstan-gember.git",
-                "reference": "1f0c6f81aefbde7887b6c57879d9ce056a08d997"
+                "reference": "871ce7875052369c6d8cc2f05d1f1929e8d3f314"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/phpstan-gember/zipball/1f0c6f81aefbde7887b6c57879d9ce056a08d997",
-                "reference": "1f0c6f81aefbde7887b6c57879d9ce056a08d997",
+                "url": "https://api.github.com/repos/GemberPHP/phpstan-gember/zipball/871ce7875052369c6d8cc2f05d1f1929e8d3f314",
+                "reference": "871ce7875052369c6d8cc2f05d1f1929e8d3f314",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.18 || ^0.19 || ^0.20",
+                "gember/event-sourcing": "^0.18 || ^0.19 || ^0.20 || ^0.21",
                 "php": "^8.3",
                 "phpstan/phpstan": "^2.1"
             },
@@ -6346,9 +6346,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/phpstan-gember/issues",
-                "source": "https://github.com/GemberPHP/phpstan-gember/tree/0.2.2"
+                "source": "https://github.com/GemberPHP/phpstan-gember/tree/0.2.3"
             },
-            "time": "2026-10-30T15:02:28+00:00"
+            "time": "2026-10-31T08:37:02+00:00"
         },
         {
             "name": "phpstan/extension-installer",
