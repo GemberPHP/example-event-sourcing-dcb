@@ -15,14 +15,26 @@ It contains both classic aggregates (e.g. [Course](src/Domain/Course/Course.php)
 Inspired by other PHP libraries such as [Broadway](https://github.com/broadway), [EventSauce](https://github.com/EventSaucePHP), [Prooph](https://github.com/prooph) and [Ecotone](https://github.com/ecotoneframework) as well as [Axon Framework](https://github.com/AxonFramework) for Java.
 
 ### How to run
-Run database with Docker compose:
+Requirements on the host: PHP 8.5 with `pdo_mysql` and `pcntl`, and Composer. Docker only runs MySQL.
+
+Install the dependencies:
 ```
-docker compose up
+composer install
+```
+
+Run database with Docker compose (wait until MySQL accepts connections):
+```
+docker compose up -d
 ```
 
 Run migrations:
 ```
 bin/console doctrine:migrations:migrate
+```
+
+This app uses the outbox (`dispatch.strategy: outbox`): events and saga commands are dispatched by the outbox processor, so keep it running in a separate terminal:
+```
+bin/console gember:outbox:process --watch
 ```
 
 You're all set, see what commands you can run:
@@ -35,9 +47,6 @@ Or run the demo command to run random sets of commands concurrently:
 # 1. Create shared fixtures (run once)
 php bin/console gember:demo:setup --courses=10 --students=50
 
-# 2. Start the outbox worker (in a separate terminal, polls every 100ms by default)
-php bin/console gember:outbox:process --watch
-
-# 3. Hammer them concurrently
+# 2. With the outbox processor running (see above), hammer them concurrently
 seq 1 10 | xargs -P10 -I{} php bin/console gember:demo:stress --iterations=50
 ```
