@@ -25,7 +25,7 @@ final class Version20260820120000 extends AbstractMigration
               `claimed_by` varchar(100) COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
               `claimed_until` datetime(6) NULL DEFAULT NULL,
               PRIMARY KEY (`id`),
-              KEY `outbox_unprocessed` (`processed_at`, `dead_lettered_at`, `created_at`, `id`)
+              KEY `outbox_unprocessed` (`processed_at`, `dead_lettered_at`, `claimed_until`, `created_at`, `id`)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
             SQL
         );
