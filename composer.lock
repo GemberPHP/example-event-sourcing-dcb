@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ead2e84f64c6c596c6e6a4b839ff73f3",
+    "content-hash": "d4031952b5319dffe8bc4aa793393fcb",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -1245,19 +1245,20 @@
         },
         {
             "name": "gember/event-sourcing",
-            "version": "0.21.0",
+            "version": "0.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing.git",
-                "reference": "8b7f2d5246b46091b9f184e2c0fa42a5e494c57e"
+                "reference": "64e095171b0e87d0f17b352b00d1b4419e98f870"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/8b7f2d5246b46091b9f184e2c0fa42a5e494c57e",
-                "reference": "8b7f2d5246b46091b9f184e2c0fa42a5e494c57e",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing/zipball/64e095171b0e87d0f17b352b00d1b4419e98f870",
+                "reference": "64e095171b0e87d0f17b352b00d1b4419e98f870",
                 "shasum": ""
             },
             "require": {
+                "composer-runtime-api": "^2.0",
                 "ext-mbstring": "*",
                 "ext-tokenizer": "*",
                 "gember/dependency-contracts": "^0.9",
@@ -1304,27 +1305,27 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.21.0"
+                "source": "https://github.com/GemberPHP/event-sourcing/tree/0.22.0"
             },
-            "time": "2026-10-31T08:29:05+00:00"
+            "time": "2026-11-01T18:43:09+00:00"
         },
         {
             "name": "gember/event-sourcing-symfony-bundle",
-            "version": "0.23.1",
+            "version": "0.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/event-sourcing-symfony-bundle.git",
-                "reference": "0c6aa650102d0833cc0500684615694a29f2b602"
+                "reference": "f9922bd97b8cb9c6e43a40e1f62f762fa2776a7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/0c6aa650102d0833cc0500684615694a29f2b602",
-                "reference": "0c6aa650102d0833cc0500684615694a29f2b602",
+                "url": "https://api.github.com/repos/GemberPHP/event-sourcing-symfony-bundle/zipball/f9922bd97b8cb9c6e43a40e1f62f762fa2776a7a",
+                "reference": "f9922bd97b8cb9c6e43a40e1f62f762fa2776a7a",
                 "shasum": ""
             },
             "require": {
                 "ext-pcntl": "*",
-                "gember/event-sourcing": "^0.21",
+                "gember/event-sourcing": "^0.22",
                 "gember/identity-generator-symfony": "^0.12",
                 "gember/message-bus-symfony": "^0.12",
                 "gember/rdbms-event-store-doctrine-dbal": "^0.21 || ^0.22",
@@ -1346,7 +1347,7 @@
                 "shipmonk/composer-dependency-analyser": "^1.7",
                 "symfony/yaml": "^7.1|^7.2|^8.0"
             },
-            "type": "library",
+            "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
                     "Gember\\EventSourcingSymfonyBundle\\": "src/"
@@ -1376,9 +1377,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/issues",
-                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.23.1"
+                "source": "https://github.com/GemberPHP/event-sourcing-symfony-bundle/tree/0.24.0"
             },
-            "time": "2026-11-01T12:17:21+00:00"
+            "time": "2026-11-01T18:50:54+00:00"
         },
         {
             "name": "gember/identity-generator-symfony",
@@ -6294,20 +6295,20 @@
         },
         {
             "name": "gember/phpstan-gember",
-            "version": "0.2.3",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GemberPHP/phpstan-gember.git",
-                "reference": "871ce7875052369c6d8cc2f05d1f1929e8d3f314"
+                "reference": "334bd893812281f595e3ca0f9edb696b2c0d8ac1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GemberPHP/phpstan-gember/zipball/871ce7875052369c6d8cc2f05d1f1929e8d3f314",
-                "reference": "871ce7875052369c6d8cc2f05d1f1929e8d3f314",
+                "url": "https://api.github.com/repos/GemberPHP/phpstan-gember/zipball/334bd893812281f595e3ca0f9edb696b2c0d8ac1",
+                "reference": "334bd893812281f595e3ca0f9edb696b2c0d8ac1",
                 "shasum": ""
             },
             "require": {
-                "gember/event-sourcing": "^0.18 || ^0.19 || ^0.20 || ^0.21",
+                "gember/event-sourcing": "^0.18 || ^0.19 || ^0.20 || ^0.21 || ^0.22",
                 "php": "^8.3",
                 "phpstan/phpstan": "^2.1"
             },
@@ -6321,7 +6322,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "PHPStan\\": "src/"
+                    "Gember\\PHPStan\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6346,9 +6347,9 @@
             ],
             "support": {
                 "issues": "https://github.com/GemberPHP/phpstan-gember/issues",
-                "source": "https://github.com/GemberPHP/phpstan-gember/tree/0.2.3"
+                "source": "https://github.com/GemberPHP/phpstan-gember/tree/0.3.0"
             },
-            "time": "2026-10-31T08:37:02+00:00"
+            "time": "2026-11-01T18:55:40+00:00"
         },
         {
             "name": "phpstan/extension-installer",
